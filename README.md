@@ -1,11 +1,13 @@
 ---
 what: Computing Fundamentals for Human(s|ists)
 where: University of Victoria, BC
-when: Summer 2016
+when: June 5-9, 2017
 ---
 
 [John Simpson](https://twitter.com/symulation)  
-[Dennis Yi Tenen](https://twitter.com/dennistenen)
+[Alicia Cappello](https://twitter.com/aliciavc99)
+
+-_-_-_-_-_ ALL CONTENT IS CURRENTLY UNDER REVISION _-_-_-_-_-
 
 ## Class Description
 
