@@ -90,14 +90,14 @@ comfortable with the conversational, call and response style of programming.
   
   Tomorrow we'll be focusing on coding in Python. We'll be using both the command line to do this, and Jupyter Notebooks, which is included in Anaconda. In order to be prepared, please make sure you have the following items installed on your laptop:
 
-  - 1. Python - Comes pre-installed on macOS and Linux platforms, so no additional downloads are required. For Windows users, you will need to install a Plugin for MobaXterm. Go to the following URL -> http://mobaxterm.mobatek.net/plugins.html <- click on the Python plugin (listed in alphabetical order) and download the plugin to your computer. Once the plugin is downloaded, move the file to the same folder where the MobaXterm executable file is located. The executable will have the following name -> mobaxterm.exe <- search for its location on your laptop if you aren't sure where MobaXterm was installed.
+    1.6.1. Python - Comes pre-installed on macOS and Linux platforms, so no additional downloads are required. For Windows users, you will need to install a Plugin for MobaXterm. Go to the following URL -> http://mobaxterm.mobatek.net/plugins.html <- click on the Python plugin (listed in alphabetical order) and download the plugin to your computer. Once the plugin is downloaded, move the file to the same folder where the MobaXterm executable file is located. The executable will have the following name -> mobaxterm.exe <- search for its location on your laptop if you aren't sure where MobaXterm was installed.
 
-  - 2. Anaconda - You may have already installed Anaconda before this course began. If you didn't install it, please do so tonight. You can find the free download at -> https://www.continuum.io/downloads. Make sure to download version 3.x.
+    1.6.2. Anaconda - You may have already installed Anaconda before this course began. If you didn't install it, please do so tonight. You can find the free download at -> https://www.continuum.io/downloads. Make sure to download version 3.x.
   
-  - 3. Text Editor - Most operating systems come pre-installed with at least one version of a text editor. However, "real programmers" tend to like to use more complex text editors that are designed to work with programming languages. There are a lot of options to use, as you can see from this list -> https://en.wikipedia.org/wiki/List_of_text_editors. If you're unsure which text editor to download, start with Sublime Text.
-      - Sublime Text -> https://www.sublimetext.com/3
-      - BBEdit -> http://www.barebones.com/products/bbedit/
-      - Atom -> https://atom.io
+    1.6.3. Text Editor - Most operating systems come pre-installed with at least one version of a text editor. However, "real programmers" tend to like to use more complex text editors that are designed to work with programming languages. There are a lot of options to use, as you can see from this list -> https://en.wikipedia.org/wiki/List_of_text_editors. If you're unsure which text editor to download, start with Sublime Text.
+        - Sublime Text -> https://www.sublimetext.com/3
+        - BBEdit -> http://www.barebones.com/products/bbedit/
+        - Atom -> https://atom.io
 
 ## Day 2: Python I (6 hrs)
 
