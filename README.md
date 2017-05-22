@@ -40,9 +40,9 @@ You should walk away from this course with the following knowledge:
 
 Before attending this course, you may wish to install the following items on your laptop:
 
-- 1. MobaXterm - Is only needed for Windows users. This program provides a command link or terminal window for you to use when we go through the material on Day 1. You may also find it useful to continue using MobaXterm as you write various Python scripts throughout the weeek. You can download a free version of the software here -> http://mobaxterm.mobatek.net/download.html.
+  1. MobaXterm - Is only needed for Windows users. This program provides a command link or terminal window for you to use when we go through the material on Day 1. You may also find it useful to continue using MobaXterm as you write various Python scripts throughout the weeek. You can download a free version of the software here -> http://mobaxterm.mobatek.net/download.html.
 
-- 2. Anaconda - Will be required for users of all operating systems. Anaconda is an open data science platform that is powered by Python. In addition to being able to write Python scripts, Anaconda also contains hundreds of packages that are either pre-installed or can be easily downloaded and used with Python. You can download a free version of Anaconda here -> https://www.continuum.io/downloads. Make sure to download version 3.x.
+  2. Anaconda - Will be required for users of all operating systems. Anaconda is an open data science platform that is powered by Python. In addition to being able to write Python scripts, Anaconda also contains hundreds of packages that are either pre-installed or can be easily downloaded and used with Python. You can download a free version of Anaconda here -> https://www.continuum.io/downloads. Make sure to download version 3.x.
  
 ## Day 1: Shell (4.5 hrs)
 
