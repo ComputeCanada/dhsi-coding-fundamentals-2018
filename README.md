@@ -4,10 +4,10 @@ where: University of Victoria, BC
 when: June 5-9, 2017
 ---
 
-[John Simpson](https://twitter.com/symulation)  
-[Alicia Cappello](cappello@ualberta.ca) | [Twitter](https://twitter.com/aliciavc99)
+John Simpson | john.simpson@computecanada.ca | [Twitter](https://twitter.com/symulation)  
+Alicia Cappello | cappello@ualberta.ca | [Twitter](https://twitter.com/aliciavc99)
 
--_-_-_-_-_ ALL CONTENT IS CURRENTLY UNDER REVISION _-_-_-_-_-
+-_-_-_-_-_ Content updated May 22nd, but not complete. _-_-_-_-_-
 
 ## Class Description
 
@@ -190,15 +190,15 @@ and five.
 
 ## Day 5: Race to the Finish (3 hrs)
 
-- 5.1 Continue Working on Your Projects (1 hr)
+- 5.1 **Continue Working on Your Projects** (1 hr)
 
-- 5.2 Start Thinking About ... (1 hr)
+- 5.2 **Start Thinking About ...** (1 hr)
   - Was the scope of my project too big or too small?
   - Can I make my code/script more compact, concise, or efficient?
   - Did I add enough comments that a non-programmer can understand what the code does?
   - What do I still need to do? Make a plan to finish your project (if you haven't already done so) after you leave DHSI.
 
-- 5.3 Finishing Up (30 mins)
+- 5.3 **Finishing Up** (30 mins)
   - Keep working on your projects!
   - Email us if you have questions or need help.
   - Send us your script when you're done, and we'll post it on this website.
@@ -208,7 +208,7 @@ and five.
 
 Project scripts will go here.
 
-## Next Steps
+## Other Resources about Python
 
 - [What a well-informed person ought to know about computers and communications](http://dl.acm.org/citation.cfm?id=2380975) by Brian Kirnighan
 - [Data Science at the Command Line](http://datascienceatthecommandline.com/) by Jeroen Jannsens
