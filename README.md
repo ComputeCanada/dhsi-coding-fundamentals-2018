@@ -5,7 +5,7 @@ when: June 5-9, 2017
 ---
 
 [John Simpson](https://twitter.com/symulation)  
-[Alicia Cappello](https://twitter.com/aliciavc99)
+[Alicia Cappello](cappello@ualberta.ca) | [Twitter](https://twitter.com/aliciavc99)
 
 -_-_-_-_-_ ALL CONTENT IS CURRENTLY UNDER REVISION _-_-_-_-_-
 
@@ -34,21 +34,23 @@ You should walk away from this course with the following knowledge:
 
 ## Reading Material
 
+The main book for our course is called *Think Python: How to Think Like a Computer Scientist* by Allen B. Downey. We're using the 2nd Edition, as it was updated for version 3.x of Python. There are four places you can get this book:
 
+  1. Via the coursepak provided by DHSI [here](http://dhsi.org/content/2017Curriculum/4.%20Fundamentals%20of%20Programming:Coding%20for%20Human(s%7Cists).pdf). You can download the coursepak as a PDF and use it on your computer, you can print it yourself, or you can ask the UVic Bookstore to print you a copy. The instructions for getting a copy printed at UVic are in Ray Siemens email dated May 17th, 2017.
+
+  2. Via the book publisher's website [here](http://greenteapress.com/thinkpython2/thinkpython2.pdf). The PDF or ePub versions can be downloaded for free and used on your computer or printed if you'd like.
+
+  3. Via a bookstore like [Amazon.ca](https://www.amazon.ca/Think-Python-Like-Computer-Scientist/dp/1491939362/ref=sr_1_1?ie=UTF8&qid=1495505046&sr=8-1&keywords=think+python) or [Indigo.ca](https://www.chapters.indigo.ca/en-ca/books/think-python-how-to-think/9781491939369-item.html?ikwid=think+python&ikwsec=Home&ikwidx=0) if you prefer a hard copy. 
+
+  4. Via the ProQuest database called [Safari Books Online](https://www.safaribooksonline.com). Most academic libraries should have access to this database, and possibly even some public libraries. To access the database via a library, make sure to sign into your personal library account first, then search for and go to the database. To access it on your own, you can use the link provided [here](https://www.safaribooksonline.com) and sign-up for a personal trial account.
 
 ## Before Day 1
 
-Before attending this course, you may wish to install the following items on your laptop:
-
-  1. MobaXterm - Is only needed for Windows users. This program provides a command link or terminal window for you to use when we go through the material on Day 1. You may also find it useful to continue using MobaXterm as you write various Python scripts throughout the weeek. You can download a free version of the software here -> http://mobaxterm.mobatek.net/download.html.
-
-  2. Anaconda - Will be required for users of all operating systems. Anaconda is an open data science platform that is powered by Python. In addition to being able to write Python scripts, Anaconda also contains hundreds of packages that are either pre-installed or can be easily downloaded and used with Python. You can download a free version of Anaconda here -> https://www.continuum.io/downloads. Make sure to download version 3.x.
+On Day 1 of this course we'll be learning how to use the command line (aka., terminal, BASH, shell). macOS and Linux users will already have software installed that will easily allow them to do this, but Windows users need to install some additional software. For the purpose of this course, we'll use software called MobaXterm to mimic the command line on a Windows machine. You can download a FREE version of MobaXterm here -> http://mobaxterm.mobatek.net/download.html.
  
 ## Day 1: Shell (4.5 hrs)
 
-We will spend the day working with the terminal, learning the basics of the
-file system, data flow programming, and text manipulation. The goal is to get
-comfortable with the conversational, call and response style of programming.
+We will spend the day working with the terminal, learning the basics of the file system, data flow programming, and text manipulation. The goal is to get comfortable with the conversational, call, and response style of programming.
 
 - 1.1 Welcome
   - 1.1.1 Introductions & Resources
@@ -88,13 +90,13 @@ comfortable with the conversational, call and response style of programming.
 
 - 1.6 Concluding Remarks & Preparing for Tomorrow
   
-  Tomorrow we'll be focusing on coding in Python. We'll be using both the command line to do this, and Jupyter Notebooks, which is included in Anaconda. In order to be prepared, please make sure you have the following items installed on your laptop:
+  Tomorrow we'll be focusing on coding in Python. We'll be using both the command line and Jupyter Notebooks to do this. Jupyter Notebooks is included with the Anaconda software noted below. In order to be prepared for tomorrow, please make sure you have the following items installed on your laptop:
 
-    - 1.6.1. **Python** - Comes pre-installed on macOS and Linux platforms, so no additional downloads are required. For Windows users, you will need to install a Plugin for MobaXterm. Go to the following URL -> http://mobaxterm.mobatek.net/plugins.html <- click on the Python plugin (listed in alphabetical order) and download the plugin to your computer. Once the plugin is downloaded, move the file to the same folder where the MobaXterm executable file is located. The executable will have the following name -> mobaxterm.exe <- search for its location on your laptop if you aren't sure where MobaXterm was installed.
+    - 1.6.1. **Python** - Comes pre-installed on macOS and Linux platforms -- no additional downloads required. For Windows users, you will need to install a Plugin for MobaXterm. Go to the following URL -> http://mobaxterm.mobatek.net/plugins.html <- click on the **Python** plugin (listed in alphabetical order) and download the plugin file to your computer. Once the file is downloaded, move it to the same folder where the MobaXterm executable file is located. The executable will have the following name -> mobaxterm.exe. Search for its location on your laptop if you aren't sure where MobaXterm was installed.
 
-    - 1.6.2. **Anaconda** - You may have already installed Anaconda before this course began. If you didn't install it, please do so tonight. You can find the free download at -> https://www.continuum.io/downloads. Make sure to download version 3.x.
+    - 1.6.2. **Anaconda** - You may have already installed Anaconda before this course began. If you didn't install it, please do so tonight. You can find the free download at -> https://www.continuum.io/downloads. Make sure to download version 3.x. 
   
-    - 1.6.3. **Text Editor** - Most operating systems come pre-installed with at least one version of a text editor. However, "real programmers" tend to like to use more complex text editors that are designed to work with programming languages. There are a lot of options to use, as you can see from this list -> https://en.wikipedia.org/wiki/List_of_text_editors. If you're unsure which text editor to download, start with Sublime Text.
+    - 1.6.3. **Text Editor** - Most operating systems come pre-installed with at least one version of a text editor. However, "real programmers" tend to like to use more complex text editors that are designed to work with programming languages. There are a lot of options to use, as you can see from this [list](https://en.wikipedia.org/wiki/List_of_text_editors). If you're unsure which text editor to download, start with Sublime Text.
         - Sublime Text -> https://www.sublimetext.com/3
         - BBEdit -> http://www.barebones.com/products/bbedit/
         - Atom -> https://atom.io
@@ -103,28 +105,50 @@ comfortable with the conversational, call and response style of programming.
 
 - 2.1 Python Programming for Everyone
 
-test test test
+    - 2.1.1 Why do I need to know how to program?
+    - 2.1.2 Variables, Expressions, and Statements
+    - 2.1.3 Conditional Expressions, i.e., IF statements
+    - 2.1.4 Functions
+    - 2.1.5 Iterations and Loops
+    - 2.1.6 Strings
+    - 2.1.7 Files
+    - 2.1.8 Lists
+    - 2.1.9 Dictionaries
+    - 2.1.10 Tuples
+    - 2.1.11 Object-oriented Programming
 
 - 2.2 Getting Help
 
+  - 2.2.1 Python.org website
+  - 2.2.2 StackExchange
+  - 2.2.3 Books
+  - 2.2.4 Google
+  - 2.2.5 Help Desk (maybe)
+
 - 2.3 Preparing for Tomorrow
 
-    Tomorrow we'll start the day by writing a script that will determine a user's Chinese Zodiac sign after they have entered their year of their birth. A script or program like this will require the use of many of the things we learned today. We will use the following input file -> TBD <- to determine which Chinese Zodiac signs go with which years. Think about how we might approach this tonight and come prepared tomorrow to share your ideas.
+  Tomorrow we'll start the day by writing a script that will determine a user's Chinese Zodiac sign after they have entered their year of their birth. A script or program like this will require the use of many of the things we learned today. We will use the following input file -> TBD <- to determine which Chinese Zodiac signs go with which years. Think about how we might approach this tonight and come prepared tomorrow to share your ideas.
 
-## Day 3: Python II (6hr)
+## Day 3: Python II (6 hrs)
 
-- 2.2 Coding with John: [Zodiac](https://github.com/xpmethod-workshops/dhsi-coding-fundamentals/tree/master/python-live-code/zodiac).  We will be using the shell and a text editor for this session.  If you are using windows then it will make sense to use the command prompt rather than MobaXterm because it will give you easier access to the Anaconda installs of Python.  You can use many of your Bash Shell commands in the Windows Command Prompt but you'll find a crash course [HERE](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html).
+- 3.1 [Chinese Zodiac](https://github.com/xpmethod-workshops/dhsi-coding-fundamentals/tree/master/python-live-code/zodiac)
 
-- 2.3 Code Review:
+  We will be using the shell and a text editor for this session.  If you are using Windows, it will make sense to use the command prompt rather than MobaXterm because it will give you easier access to the Anaconda installs of Python.  You can use many of your Bash Shell commands in the Windows Command Prompt but you'll find a crash course [HERE](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html).
+
+- 3.2 Code Review:
 [RikersBot](https://github.com/xpmethod/rikersbot/blob/master/rikersbot.py)
 
-- 2.4 Code Annotation/Templates.  [Version with small data files]() (98.7MB, GitHub). [Version with full data files](https://owncloud.westgrid.ca/index.php/s/V3OkC0uCbTU20Oh) (2.4GB, Compute Canada's OwnCloud)
+- 3.3 Code Annotation/Templates
 
-- 3.1 Lab: Essay Grader Handout
+  [Version with small data files]() (98.7MB, GitHub). [Version with full data files](https://owncloud.westgrid.ca/index.php/s/V3OkC0uCbTU20Oh) (2.4GB, Compute Canada's OwnCloud)
 
-- 3.2 Thinking Like a Programmer: From Comments to Code
+- 3.4 Lab: Essay Grader Handout
 
-- 3.3 Project brainstorm and initial planning
+- 3.5 Thinking Like a Programmer: From Comments to Code
+
+- 3.6 Individual Projects: Brainstorming and Planning
+
+  Tomorrow you'll get your first crack at your individual projects. Take the time tonight to think about what sort of a project you'd like to take on. If you're having trouble coming up with a project, ask us and we can provide you with some options.
 
 We will complete any remaining steps from the Zodiac tool demo and then move
 to an activity where the participants are given working code examples and
@@ -139,67 +163,64 @@ Anaconda install.
 In the afternoon participants will begin planning their project for Day four
 and five.
 
-## Day 4: Individual Projects (6hr)
+## Day 4: Individual Projects (6 hrs)
 
-The bulk of today will be spent by participants in teams developing the
-projects that they began planning the day before. Participants will also be
-introduced to an *Integrated Development Environment (IDE)*, so there will be
-three options for how to develop a program:
+- 4.1 [**Integrated Development Environments** or IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
-1. Command line + text editor
-2. Jupyter notebooks
-3. [PyCharm](https://www.jetbrains.com/pycharm/) (a Python specific IDE)
+  In addition to using (a) a text editor and the command line, or (b) Jupyter Notebooks, to write and execute scripts, you can also use an IDE. We'll provide an overview of one IDE, [PyCharm](https://www.jetbrains.com/pycharm/), so you have an idea of the PROs and CONs of each method, then you can choose which option you'd like to use for your project. Just like text editors, there are a lot of IDEs you can choose from, a list of some are compared here -> https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments.
 
-There is no wrong answer here. Try to choose tools that are 
-[FOSS](http://en.wikipedia.org/wiki/Free_and_open-source_software), universal, and
-extensible.
+- 4.2 **Describing Your Individual Project**
 
-- 1hr write a short 1-2 paragraph description of your project. Concentrate on
-the goals of the *what* you are trying to accomplish, not the technical
-details. Spend some time discussing what tools and datasets you would need for
-the project. For example a simple project description may be:
+  - 4.2.1 Write a short description of your individual project, in words. At this point, don't worry about the *how*, just think about the *what*.
+  - 4.2.2 Discuss your project with your classmates. Provide feedback to each other, and update your project description if needed.
 
-> Using Python NLTK, our group would like to build an "essay grader" which
-> would take as its input a sample essay and output a score, based on several
-> parameters like sentence length variation and richness of vocabulary.
+- 4.3 **Planning Your Individual Project**
 
-- 1hr translate or "formalize" your goals into a series of step by step
-instructions in pseudocode.
+  - 4.3.1 What is psuedocode?
+  - 4.3.2 Plan the *logic* of your project using step-by-step instructions, with psuedocode, or using a flow chart. At this stage, start to think about the *how*.
+  - 4.3.3 Discuss your plan with your classmates. Do they have any suggestions on *how* to implement your project? 
 
-- project work for the rest of the day
+- 4.4 **Coding Your Individual Project**
 
-## Day 5: Race to Finish (3h)
+  - 4.4.1 Decide which software or environment you want to use: text editor, Jupyter Notebooks, or IDE.
+  - 4.4.2 Start coding your script by translating your description into comments.
+  - 4.4.3 Add the proper syntax to your script by translating your plan and/or pseudocode into Python.
 
-**9:30 - 11:30am**
+  **If you're using a text editor, don't forget to SAVE once in a while!**
 
-Reevaluate the scope of your project. Cut out inessential functionality. We are 
-trying to get to a "minimally viable" prototype stage. Take notes via code comments 
-throughout.
+## Day 5: Race to the Finish (3 hrs)
 
-**11:3 - noon**
+- 5.1 Continue Working on Your Projects (1 hr)
 
-Concluding remarks. Showcase and Plenary meeting after.
+- 5.2 Start Thinking About ... (1 hr)
+  - Was the scope of my project too big or too small?
+  - Can I make my code/script more compact, concise, or efficient?
+  - Did I add enough comments that a non-programmer can understand what the code does?
+  - What do I still need to do? Make a plan to finish your project (if you haven't already done so) after you leave DHSI.
+
+- 5.3 Finishing Up (30 mins)
+  - Keep working on your projects!
+  - Email us if you have questions or need help.
+  - Send us your script when you're done, and we'll post it on this website.
+  - And most importantly ... have fun!
 
 ## Project Code Share
 
-Projects will go here.
+Project scripts will go here.
 
 ## Next Steps
 
-- [What a well-informed person ought to know
-about computers and communications](http://dl.acm.org/citation.cfm?id=2380975) by Brian Kirnighan
+- [What a well-informed person ought to know about computers and communications](http://dl.acm.org/citation.cfm?id=2380975) by Brian Kirnighan
 - [Data Science at the Command Line](http://datascienceatthecommandline.com/) by Jeroen Jannsens
 - [DH Notes](https://github.com/denten/dhnotes/wiki)
 - [Digital Humanities Research Portal](https://www.computecanada.ca/research-portal/digital-humanities-working-group/), Compute Canada
 - [Foundations of Statistical Natural Language Processing](http://nlp.stanford.edu/fsnlp/) by Chris Manning and Hinrich Schütze
-- [Natural Language Processing with Python](http://www.nltk.org/book/) by  Steven Bird, Ewan Klein, and Edward Loper
-- [CODE
-The Hidden Language of Computer Hardware and Software](http://www.charlespetzold.com/code/) by Charles Petzold 
+- [Natural Language Processing with Python](http://www.nltk.org/book/) by Steven Bird, Ewan Klein, and Edward Loper
+- [CODE: The Hidden Language of Computer Hardware and Software](http://www.charlespetzold.com/code/) by Charles Petzold 
 - [Project Jupyter](https://github.com/jupyter)
 - [PyLadies](https://github.com/pyladies)
 - [Python Software Foundation](https://www.python.org/psf/)
 - [The Programming Historian](http://http://programminghistorian.org)
-- [Think Python: How to Think Like a Computer Scientist](by Allen B. Downey) by Allen B. Downey
 
 [1]: https://piazza.com/class/ia5h507lfcr47d 
 
