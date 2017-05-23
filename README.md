@@ -48,7 +48,7 @@ The main book for our course is called *Think Python: How to Think Like a Comput
 
 On Day 1 of this course we'll be learning how to use the command line (aka., terminal, BASH, shell). macOS and Linux users will already have software installed that will easily allow them to do this, but Windows users need to install some additional software. For the purpose of this course, we'll use software called MobaXterm to mimic the command line on a Windows machine. You can download a FREE version of MobaXterm here -> http://mobaxterm.mobatek.net/download.html.
  
-## Day 1: Shell (4.5 hrs)
+## Day 1: Shell (4.25 hrs)
 
 We will spend the day working with the terminal, learning the basics of the file system, data flow programming, and text manipulation. The goal is to get comfortable with the conversational, call, and response style of programming.
 
@@ -101,9 +101,9 @@ We will spend the day working with the terminal, learning the basics of the file
         - BBEdit -> http://www.barebones.com/products/bbedit/
         - Atom -> https://atom.io
 
-## Day 2: Python I (6 hrs)
+## Day 2: Python I (5.5 hrs)
 
-- 2.1 Python Programming for Everyone
+- 2.1 **Python Programming for Everyone**
 
     - 2.1.1 Why do I need to know how to program?
     - 2.1.2 Variables, Expressions, and Statements
@@ -117,7 +117,7 @@ We will spend the day working with the terminal, learning the basics of the file
     - 2.1.10 Tuples
     - 2.1.11 Object-oriented Programming
 
-- 2.2 Getting Help
+- 2.2 **Getting Help**
 
   - 2.2.1 Python.org website
   - 2.2.2 StackExchange
@@ -125,11 +125,11 @@ We will spend the day working with the terminal, learning the basics of the file
   - 2.2.4 Google
   - 2.2.5 Help Desk (maybe)
 
-- 2.3 Preparing for Tomorrow
+- 2.3 **Preparing for Tomorrow**
 
   Tomorrow we'll start the day by writing a script that will determine a user's Chinese Zodiac sign after they have entered their year of their birth. A script or program like this will require the use of many of the things we learned today. We will use the following input file -> TBD <- to determine which Chinese Zodiac signs go with which years. Think about how we might approach this tonight and come prepared tomorrow to share your ideas.
 
-## Day 3: Python II (6 hrs)
+## Day 3: Python II (5.5 hrs)
 
 - 3.1 [Chinese Zodiac](https://github.com/xpmethod-workshops/dhsi-coding-fundamentals/tree/master/python-live-code/zodiac)
 
@@ -163,7 +163,7 @@ Anaconda install.
 In the afternoon participants will begin planning their project for Day four
 and five.
 
-## Day 4: Individual Projects (6 hrs)
+## Day 4: Individual Projects (5.5 hrs)
 
 - 4.1 [**Integrated Development Environments** or IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
@@ -190,7 +190,7 @@ and five.
 
 ## Day 5: Race to the Finish (3 hrs)
 
-- 5.1 **Continue Working on Your Projects** (1 hr)
+- 5.1 **Continue Working on Your Projects** (1.5 hrs)
 
 - 5.2 **Start Thinking About ...** (1 hr)
   - Was the scope of my project too big or too small?
