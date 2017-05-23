@@ -17,9 +17,78 @@ Each of the following sub-sections reference material in two different books: [*
 |    2.1.10     | pgs 139, 141, 143-4        | sec. 10.1-10.5, 10.7-10.8    |
 |    2.1.11     | pgs 177-8, 181, 195-6, 203,| sec. 14.1-.5, 14.7-.8, 14.10 |
 |               | 207, 213, 215              |                              |
-|---------------|----------------------------|------------------------------|
+
+
 
 ### 2.1.1 Why do I need to know how to program?
+	
+	a. What is a program?
+	b. Problem Solving
+	c. Vocabulary & Languages
+	d. Python on the Command Line
+	e. Hello World!
+	f. Arithmetic
+	g. Errors & Debugging
 
-# one sign
+	[Slides](link to slides)
+	[Command Line Screenshots](link to screenshots)
+	[Exercises](link to exercises)
+
+### 2.1.2 Variables, Expressions, and Statements
+
+	a. Values & Types
+	b. Variables
+	c. Statements
+	d. Operators & Operands
+	e. Expressions
+	f. Order of Operations
+	g. String Operations
+	h. Comments
+
+	[Slides for 2.1.2](link to slides)
+	[Walkthrough for 2.1.2](link to Jupyter Notebook)
+	[Exercises](link to exercises)
+
+### 2.1.3 Conditional Expressions, i.e., IF statements 
+
+
+### 2.1.4 Functions
+
+
+
+
+### 2.1.5 Iterations and Loops
+
+
+
+
+### 2.1.6 Strings
+
+
+
+
+
+### 2.1.7 Files
+
+
+
+
+
+### 2.1.8 Lists
+
+
+
+
+
+### 2.1.9 Dictionaries
+
+
+
+
+### 2.1.10 Tuples
+
+
+
+
+### 2.1.11 Object-oriented Programming
 
