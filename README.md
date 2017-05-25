@@ -135,33 +135,16 @@ We will spend the day working with the terminal, learning the basics of the file
 
   We will be using the shell and a text editor for this session.  If you are using Windows, it will make sense to use the command prompt rather than MobaXterm because it will give you easier access to the Anaconda installs of Python.  You can use many of your Bash Shell commands in the Windows Command Prompt but you'll find a crash course [HERE](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html).
 
-- 3.2 Code Review:
-[RikersBot](https://github.com/xpmethod/rikersbot/blob/master/rikersbot.py)
 
-- 3.3 Code Annotation/Templates
+- 3.2 Code Annotation/Templates
 
   [Version with small data files]() (98.7MB, GitHub). [Version with full data files](https://owncloud.westgrid.ca/index.php/s/V3OkC0uCbTU20Oh) (2.4GB, Compute Canada's OwnCloud)
 
-- 3.4 Lab: Essay Grader Handout
 
-- 3.5 Thinking Like a Programmer: From Comments to Code
-
-- 3.6 Individual Projects: Brainstorming and Planning
+- 3.3 Individual Projects: Brainstorming and Planning
 
   Tomorrow you'll get your first crack at your individual projects. Take the time tonight to think about what sort of a project you'd like to take on. If you're having trouble coming up with a project, ask us and we can provide you with some options.
 
-We will complete any remaining steps from the Zodiac tool demo and then move
-to an activity where the participants are given working code examples and
-asked to add comments to these.  This exercise will help participants
-understand the structure of programs better while underscoring the importance
-of commenting code in the first place.
-
-Today we will also move from a command line + text editor environment for
-programming to the Jupyter Notebook environment that is provided within the
-Anaconda install.
-
-In the afternoon participants will begin planning their project for Day four
-and five.
 
 ## Day 4: Individual Projects (5.5 hrs)
 
