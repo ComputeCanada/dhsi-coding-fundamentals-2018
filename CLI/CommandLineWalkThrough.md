@@ -1,3 +1,8 @@
+To add/modify: 
+
+1. recall previous commands from history with !<History number> . Just ! for the last command.
+2. set up scripting piece to focus on producing a clean file first and then finding words in the clean file.  This represents the workflow better and will be a better set up for Dennis because I can just stop when the file is clean and he can start "hunting the whale."
+
 # \*nix Walkthrough
 
 <!-- Note that zero width spaces (U+200B) are used in this document when formatting stops in the middle of a word. -->
@@ -166,7 +171,7 @@ Let's make another new directory and then look at the contents of the current di
 
 The **ls** command will show that we have made a mistake: there are *two* directories---one called "Terminal" and the other called "Testing"---rather than one "Terminal Testing".  This highlights two important things for the class to remember:
 
-1. The computer does what you tell it, not what you wanted.
+1. The computer does what you tell it, not necessarily what you wanted.
 2. Spaces matter.
 
 We can fix the first by being patient and careful.  We can fix the second by:
@@ -275,7 +280,7 @@ It is important to note that you will often be prevented from deleting crucially
 
 >**Question:** What would happen if the command issued was **rm -rf /**?
 
->**Answer:** *Everything* goes since you are telling the computer to *recursively* remove everything in the root folder.  To see some "real-world" consequences of this see [http://serverfault.com/questions/587102/monday-morning-mistake-sudo-rm-rf-no-preserve-root](http://serverfault.com/questions/587102/monday-morning-mistake-sudo-rm-rf-no-preserve-root).
+>**Answer:** *Everything* goes since you are telling the computer to *recursively* remove everything in the root folder.  To see some "real-world" consequences of this see [this unfortunate forum post](http://serverfault.com/questions/587102/monday-morning-mistake-sudo-rm-rf-no-preserve-root).
 
 ### Renaming Files
 
@@ -292,15 +297,15 @@ This is another example of how a tool with one function (moving files) can be us
 
 We need a file to do some manipulation with.  There are three standard ways to do this:
 
-1. Use **curl**.
-2. Use **wget**.
+1. Use **curl**. (Installed on OSX, MobaXterm, and many Linux flavours by default)
+2. Use **wget**. (Not installed on OSX by default)
 3. Use your browser and save it to a directory
 
 We will use option #1 but it really doesn't matter as long as each program is installed.  Here's how to do it with curl:
 
-	$ curl -L -O http://bit.ly/1TTicb6
+	$ curl -L -O http://bit.ly/2qaCqW7
 
-<!-- This link is to a copy of Moby Dick that is held inside the new dh-carpentry GitHub repository. -->
+<!-- This link is to a copy of Moby Dick that is held inside the new 2017-05-15-ualberta GitHub repository. -->
 
 The "-L" flag tells curl to follow redirects and the "-O" (a capital letter o and not a zero, think of it as the "Output" flag) tells curl to write the content of the url to a file.
 
@@ -314,7 +319,7 @@ Whoa! That's a lot of text.  Fortunately there is a command just looking at the 
 
 So, we can now see that this is Moby Dick.  We can control how much text we see by passing a number as a flag to head and we'll then only see that many lines.
 
-	$ head -31TTicb6
+	$ head -3 1TTicb6
 
 If there is a command called "head" that will show the top of the file then perhaps there is command called "tail" that will show the bottom of the file and indeed there is:
 
@@ -398,7 +403,7 @@ It has replaced every space with a newline character ("\n").
 	
 *or*
 
-	$ cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
+	$ cat MobyDick.txt > tr ' ' '\n' | grep -w whale | wc -l
 
 >**Question:** How can this be modified to search for any word on all the files in a directory?
 
@@ -746,14 +751,11 @@ Before we move to looking at version control and a programming language you'll l
 
 	$ history > history_file.txt
 
-Three other things to note about the history command:
+Two other things to note about the history command:
 
 1. it can be combined with **grep** to find commands you have forgotten.
 
 	$ history | grep cat
 
 2. it is the history file that you are scrolling through when you press the up arrow on the commandline to avoid typing the same commands over and over.
-
-3. previous commands from history can be recalled with !<History number> . A ! on its own will recall the last command.
-
 
