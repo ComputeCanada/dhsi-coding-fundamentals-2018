@@ -121,7 +121,7 @@ The "~" is the "tilde" character and it is usually found with the "backtick" cha
 > 2. It changes the working directory to /.
 > 3. It changes the working directory to the user’s home directory.
 > 4. It produces an error message.
-> **Answer:** 1.
+> **Answer:** 3.
 
 
 <!-- -->

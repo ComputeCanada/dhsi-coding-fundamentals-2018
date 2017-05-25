@@ -150,7 +150,7 @@ We will spend the day working with the terminal, learning the basics of the file
 
 - 4.1 [**Integrated Development Environments** or IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
-  In addition to using (a) a text editor and the command line, or (b) Jupyter Notebooks, to write and execute scripts, you can also use an IDE. We'll provide an overview of one IDE, [PyCharm](https://www.jetbrains.com/pycharm/), so you have an idea of the PROs and CONs of each method, then you can choose which option you'd like to use for your project. Just like text editors, there are a lot of IDEs you can choose from, a list of some are compared here -> https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments.
+  In addition to using (a) a text editor and the command line, or (b) Jupyter Notebooks, to write and execute scripts, you can also use an IDE. We'll provide an overview of one IDE, either [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://pythonhosted.org/spyder/), so you have an idea of the PROs and CONs of each method, then you can choose which option you'd like to use for your project. Just like text editors, there are a lot of IDEs you can choose from, a list of some are compared here -> [https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments]()
 
 - 4.2 **Describing Your Individual Project**
 
