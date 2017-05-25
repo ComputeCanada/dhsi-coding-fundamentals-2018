@@ -2,6 +2,7 @@ To add/modify:
 
 1. recall previous commands from history with !<History number> . Just ! for the last command.
 2. set up scripting piece to focus on producing a clean file first and then finding words in the clean file.  This represents the workflow better and will be a better set up for Dennis because I can just stop when the file is clean and he can start "hunting the whale."
+3. Build slides for the challenge/comprehension questions
 
 # \*nix Walkthrough
 
@@ -97,6 +98,9 @@ Have them look in the root directory with:
 
 >**Answer:** They can look these up using **man ls** or just try them out.
 
+
+Remember `man -k search_word` for finding `man` commands.  You may need to be creative with the terms you use.
+
 ### Moving Around
 
 The change directory command (**cd**) can be substituted for the list directory structure (**ls**) command with everything you have learned so far.
@@ -148,31 +152,18 @@ Start this section by having each user navigate to their *Desktop directory*.
 
 We are going to create a directory to hold the files that we will be working with.  We are going to do this in the Desktop directory because it will be very easy to see the consequences of what you do here.
 
-	$ mkdir SoftwareCarpentry
+	$ mkdir Software Carpentry
 
-Have them minimize their window and go and look at their desktop to see the new folder.  Have them actually open the folder with their GUI so that they can watch what happens *and have multiple ways of interacting with the files*.  This last part is important since there is more than one way to get things done.
+Have them minimize their window and go and look at their desktop to see the new folders.  Have them actually open the folder with their GUI so that they can watch what happens *and have multiple ways of interacting with the files*.  This last part is important since there is more than one way to get things done.
 
 Point out that they can swap between windows with CMD-TAB (MAC) / ALT-TAB (WINDOWS / LINUX).
 
-Return to the Terminal and enter the newly created directory:
+Wait... Folder_S_!?!  What happened?
 
-	$ cd SoftwareCarpentry
-
-See what's here:
-
-	$ ls
-
-It's empty, as it should be (compare to GUI).
-
-Let's make another new directory and then look at the contents of the current directory:
-
-	$ mkdir Terminal Testing
-	$ ls
-
-The **ls** command will show that we have made a mistake: there are *two* directories---one called "Terminal" and the other called "Testing"---rather than one "Terminal Testing".  This highlights two important things for the class to remember:
+The **ls** command will show that we have made a mistake: there are *two* directories---one called "Software" and the other called "Carpentry"---rather than one "Software Carpentry" directory.  This highlights two important things for the class to remember:
 
 1. The computer does what you tell it, not necessarily what you wanted.
-2. Spaces matter.
+2. Spaces matter on the command line, they are punctuation.
 
 We can fix the first by being patient and careful.  We can fix the second by:
 
@@ -181,21 +172,29 @@ We can fix the first by being patient and careful.  We can fix the second by:
 	2. Dashes
 	3. Underscores
 2. Escaping the space by preceding it with a "\".
+3. Wrapping content with spaces in double quotes.
 
-Let's make the proper directory using underscores and then move into that directory:
+Let's make the proper directory using underscores, move into that directory, create a sub directory and then move in there (We'll come back to clean up the extra folders later):
 
-	$ mkdir Terminal_Testing
-	$ cd Terminal_Testing
+	$ mkdir Software_Carpentry
+	$ cd Software_Carpentry
+	$ mkdir Command_Line
 
-### Creating a File
+### Creating and Viewing Files
 
-We are now going to make a file.  It is important for the participants to note that what matters here is that *they can create a text file* not what tool they use to make that text file.  We will use **nano** because it is simple, has the instructions listed on the bottom of the screen, and keeps us in the terminal window (which is convenient, that's all), *beyond these reasons there is nothing special about nano*.  What matters is that the tool they choose is a **TEXT EDITOR** and the that they can use it.  If they want to use another terminal program (like vim or emacs) or a GUI tool (like TextWrangler, Sublime, or Notepad++) that's just fine.  They need to know that they cannot use tools like Word or LibreOffice.
+We are now going to make a file.  It is important for the participants to note that what matters here is that *they can create a text file* not what tool they use to make that text file.  We will use **nano** because it is simple, has the instructions listed on the bottom of the screen, and keeps us in the terminal window (which is convenient, that's all), *beyond these reasons there is nothing special about nano*.  What matters is that the tool they choose is a **TEXT EDITOR** and that they can use it.  If they want to use another terminal program (like vim or emacs) or a GUI tool (like TextWrangler, Sublime, or Notepad++) that's just fine.  They need to know that they cannot use tools like Word or LibreOffice because they hide other content even though they look like plain text.
 
-	$ nano Important_Ideas
+> If people are using MobaXterm or some other shell that doesn't have nano installed by default then they can likely get it with one of the following commands:`$ apt-get install nano`;`$ yum install nano`
+> 
+> apt-get and yum are package management tools that are likely installed already that can be used to install other software, in this case the text editor Nano.
 
-This will open the nano program and allow people to type into it.  It is text-only, there is no fancy formatting.  The available commands are on the bottom of the screen.  The "^" means "hold the control key and then press the key to the right".
+We will run nano by issuing the command followed by the name of the file we would like to create/edit.
 
-Have the students make a list with the top three things that they have learned  in this workshop so far.  They will then save it by:
+	$ nano Important_Ideas1
+
+This opens the nano program and allows the declared file to be edited/created.  Nano is text-only, there is no fancy formatting.  The available commands are on the bottom of the screen.  The "^" means "hold the control key and then press the key to the right".
+
+Have the students make a list with the top three things that they have learned in this workshop so far.  They will then save it by:
 
 	^x		(hold control and press 'x')
 	y		(to respond "yes" when they are asked if they want to save the file)
@@ -206,19 +205,65 @@ Check that the file is in the folder:
 
 To view the content of the file we could run nano again (If not already covered this is a great time to cover using the up arrow to scroll through past commands):
 
-	$ nano Important_Ideas
+	$ nano Important_Ideas1
 
 This can get annoying though and of course there is a command to show the contents of a file without having to go through the burden of opening a full program.
 
-	$ cat Important_Ideas
+	$ cat Important_Ideas1
 
 **cat** is the concatenate files command.  Concatenation is a join operator.  The command also prints out the consequences of the concatenation to the screen.  If you only give it one file then it just spits back that one file.  This is a great example of tools being very useful but not quite in the way that their name or historical purpose might suggest.
 
 >**Question:** What will the *-n* flag do when run with **cat**?
 
 >**Answer:** Prints the line numbers for each line in each file.
+>
+>Note that it appears that the -n flag does not funciton with MobaXterm.
 
-### Copying Files
+Have participants make a new file called "Important_Ideas2" and add some new ideas to it.
+
+>**Question:** How can we print the content of Important_Ideas1 and Important_Ideas2 on the screen _as if_ they were a single file?
+>
+>**Answer**: `$ cat Important_Ideas1 Important_Ideas2`
+
+### Redirecting Standard Out
+
+This is useful, but what if we wanted actually make these into a single file?  To do this we need to redirect the output of `cat` away from what is known as "standard out" (aka "the screen") to another place.  In this particular case that other place is a file.  We do this using the redirect operator:
+
+	$ cat Important_Ideas1 Important_Ideas2 > Important_Ideas
+
+If we run `ls` we'll see a new file in the directory and if we run `cat` on this file we'll see that the contents of both original files are there.  Nice.
+
+What has happened here is that the output of `cat` has been *redirected* from "standard out" to a file with a name that we specified.  The single greater-than symbol is the most basic redirect symbol, taking the output from the command on the left and passing it to the file on the right.
+
+Note that using a `>` will _overwrite_ content already in a file.  If you want to add content to a file then we can append it to the bottom with the `>>` redirect.  Try adding a new line to the bottom of the important ideas file by using the `echo` command and redirecting that to our file:
+
+	$ echo "here is another idea" >> Important_Ideas
+	
+Use `ls` and `cat` to verify that the contents have changed appropriately.
+	
+### History and Piping Commands
+
+You've done a lot so far and it might be helpful to see what you've done all at once, rather than the one-line-at-a-time view that using the up and down arrow keys gives you.  There is a command for showing your past commands and you should try it now:
+
+	$ history
+	
+>**Question:** How can this be saved to a file?
+>
+>**Answer:** `history > history.txt`
+>
+>**Question:** When would we use `>>` in a case like this?
+
+Once we have this file we can search it using a command called `grep`, or the **G**NU **R**egular **E**xpression **P**arser, for content.  Let's suppose we know that we used a new command awhile ago but can't remember what it was called but we can remember that we looked its man page:
+	
+	grep man history.txt
+
+This will give us a list of all the lines in the history file.  The history file that we made isn't current anymore though and there is a slicker way to do this with one final redirect symbol: `|`.  This is known as the "pipe" character and it is found with the `\` character just above the enter key on most Western keyboards.  With it we can pass the input of one command to another rather than chaining it to a file.
+
+	$ history | grep man
+
+We're now done in this directory so let's move back to  ~/Desktop/Software_Carpentry/Command_Line:
+
+### Moving and Copying Files
 
 We only have one file in this directory so keeping it around is kind of a waste.  Let's move this file up one directory and then delete the directory.
 
