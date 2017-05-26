@@ -152,15 +152,21 @@ Start this section by having each user navigate to their *Desktop directory*.
 
 We are going to create a directory to hold the files that we will be working with.  We are going to do this in the Desktop directory because it will be very easy to see the consequences of what you do here.
 
-	$ mkdir Software Carpentry
+	$ mkdir Carpentry
 
 Have them minimize their window and go and look at their desktop to see the new folders.  Have them actually open the folder with their GUI so that they can watch what happens *and have multiple ways of interacting with the files*.  This last part is important since there is more than one way to get things done.
 
 Point out that they can swap between windows with CMD-TAB (MAC) / ALT-TAB (WINDOWS / LINUX).
 
+Since we are doing command line now and python later we should create a command line folder.  Let's move into the Carpentry directory, make a command line folder and then check that it exists:
+
+	$ cd Carpentry
+	$ mkdir Command Line
+	$ ls
+
 Wait... Folder_S_!?!  What happened?
 
-The **ls** command will show that we have made a mistake: there are *two* directories---one called "Software" and the other called "Carpentry"---rather than one "Software Carpentry" directory.  This highlights two important things for the class to remember:
+The **ls** command will show that we have made a mistake: there are *two* directories---one called "Command" and the other called "Line"---rather than one "Command Line" directory.  This highlights two important things for the class to remember:
 
 1. The computer does what you tell it, not necessarily what you wanted.
 2. Spaces matter on the command line, they are punctuation.
@@ -176,8 +182,7 @@ We can fix the first by being patient and careful.  We can fix the second by:
 
 Let's make the proper directory using underscores, move into that directory, create a sub directory and then move in there (We'll come back to clean up the extra folders later):
 
-	$ mkdir Software_Carpentry
-	$ cd Software_Carpentry
+	$ cd Command_Line
 	$ mkdir Command_Line
 
 ### Creating and Viewing Files
@@ -253,7 +258,9 @@ You've done a lot so far and it might be helpful to see what you've done all at 
 >
 >**Question:** When would we use `>>` in a case like this?
 
-Once we have this file we can search it using a command called `grep`, or the **G**NU **R**egular **E**xpression **P**arser, for content.  Let's suppose we know that we used a new command awhile ago but can't remember what it was called but we can remember that we looked its man page:
+Why would we want to save this to a file?  The number of lines held in the history is limited---500 on many systems---so eventually you'll lose what you typed before as it gets bumped.  Further, we will often use commands we wrote to write scripts and so having these commands stored in a file can be really useful.
+
+Once we have `history.txt` we can search it using a command called `grep`, or the **G**NU **R**egular **E**xpression **P**arser, for content. **grep** is the command to use a regular expression search tool on a specified set of files.  While it looks like we are passing it a word what we are really doing is passing it a set of characters in the form of a "regular expression" (more on this later). For now, let's suppose we know that we used a new command awhile ago but can't remember what it was called but we can remember that we looked its man page:
 	
 	grep man history.txt
 
@@ -261,11 +268,109 @@ This will give us a list of all the lines in the history file.  The history file
 
 	$ history | grep man
 
-We're now done in this directory so let's move back to  ~/Desktop/Software_Carpentry/Command_Line:
+Whether you are trying to remember what you did or diagnosing what someone else did the `history` command is an important one to remember.
 
-### Moving and Copying Files
+Lastly, you can run any line listed by the `history` command by typing an exclamation point and immediately following it with the appropriate line number.  For example, if on running `history` we were told that line number 301 was an a particular command that we wanted to run again then we could run that command again with
 
-We only have one file in this directory so keeping it around is kind of a waste.  Let's move this file up one directory and then delete the directory.
+	$ !301
+
+We're now done in this directory so let's move back to  ~/Desktop/Software_Carpentry/.
+
+>**Question:** What is the most efficient way to move to ~/Desktop/Carpentry/ from ~/Desktop/Carpentry/Command_Line/:
+> 
+> * `cd ~`
+> * `cd ~/Desktop/Carpentry/`
+> * `cd .`
+> * `cd ..`
+> 
+> **Answer:** `cd ..`
+
+### Cleaning Up
+
+##### ACHTUNG: We are now at the point where you will learn commands that can seriously damage your system.  _Be very sure that you understand what you are doing before you do it._
+
+We are done with the basics of the command line and about to move on to some "real world" examples and writing our own script.  Before we get to this though we should do some quick clean-up.  Specifically, we have some junk folders that we made "by accident", some files that it would be nice put together in a "trash" folder, and some files that would benefit from a ".txt" extension.
+
+Let's start by getting rid of the folders in this directory that we don't need.  Let's see what is here:
+
+	$ ls ..
+
+Which should show us something like:
+
+	...
+	Command
+	Line
+	Command_Line
+	...
+
+We want to remove the two accidental folders.  We can do this using the `rm` command, which _removes_ files from the system.  Let's start by testing this with a new junk file:
+
+	$ touch junkFile
+	
+`touch` is the command used to change the modification and access times associated with a file.  Like `cat` it is overloaded.  In this case the overloading creates a file with no content if the file does not already exist and no other parameters are given.  Use `cat` to look inside and `ls -l` to confirm that this is the case.
+
+Once you have confirmed that the file is there let's remove it and then check that it is gone:
+
+	$ rm junkFile
+	$ ls
+	
+##### There is _no_ recycle bin on the command line.  Once you "rm" something it is truly gone (except for the possibility of some very advanced forensics).
+
+Let's try and remove the directories Command and Line:
+
+	$ rm Command Line
+
+Running this command gives us a warning though and will not complete.  We are told that these are directories.  Directories are just files at their core but they are special files that hold/point to other files and so we cannot simply delete them without deleting their contents.
+
+>**Question:** How do we see what files are in these directories that we cannot delete?
+>
+>**Answer:** `ls -a`
+
+What is holding us back are the . and .. files.  If you try to delete them you will be told: `"." and ".." may not be removed` (Think about sitting at the end of a tree branch and cutting it off).  What we need is a special flag to use with the `rm` command.  That flag is `-r` which is the "recursive" flag, telling the command to enter a directory and remove everything inside it, all the way to the bottom.  Let's try it
+
+	$ rm -r Command Line
+	$ ls
+
+And they are gone.
+
+##### Only _think_ about the next question.  Do not figure it out by running it.
+
+>**Question:** What would happen if the command issued was **rm -rf /**?
+
+>**Answer:** *Everything* goes since you are telling the computer to *recursively* remove everything in the root folder.  For some "real-world" consequences see [this unfortunate forum post](http://serverfault.com/questions/587102/monday-morning-mistake-sudo-rm-rf-no-preserve-root).  It is possible that you will have some permission or other security mechanisms in place to prevent this but if you are a full administrator it can be done.
+>
+>Often you will be prevented from doing dangerous things---like deleting crucially important files---because you are just a regular user and not logged in as the *super user*.  It is possible to become the super user on most systems by entering the command **sudo** in front of any other command.  For those working as system administrators on UNIX-like systems a common workflow is the following:
+
+	$ tell the computer to do X
+	computer says "No, you don't have permission"
+	$ sudo tell the computer to do X
+	the computer does it (after the right password is entered)
+> You can try sudo with _any_ command to see how it works.  Let's try it with `ls`
+	
+	$ sudo ls
+	Password:
+	<list of directory contents>
+	
+Let's finish up by looking in the Command_Line folder using ls:
+
+	$ ls Command_Line
+
+Which will give output that looks like:
+
+	Important_Ideas
+	Important_Ideas1
+	Important_Ideas2
+	history.txt
+
+We really don't need Important_Ideas1 or Important_Ideas2.  We could delete them but maybe we want to keep them around a while, just not in this directory. So, let's create a new directory called "recycle" inside the current directory and move the files in.  You already know how to create a directory.  The move command is `mv` and you know how to figure out how commands work so go to it.  =)
+
+The directory structure of Command_Line should now look like:
+
+	$ ls
+	Important_Ideas
+	history.txt
+
+We should really have a .txt on the end of Important_Ideas.  How do we get it there?
 
 >**Comprehension Test:** If **cp** is the copy command then how do we make a copy of the file *Important_Ideas* up one directory?
 
@@ -275,39 +380,6 @@ We only have one file in this directory so keeping it around is kind of a waste.
 
 Note the structure of the command.
 
-### Deleting Files
-
-Now we need to get rid of the old folder.  We will do this as follows:
-
-	$ rm Terminal_Testing
-
-This will produce an error because we are in the directory and so it can't find a directory with that name:
-
-	rm: TerminalTesting: No such file or directory
-
-We can try to remove the current directory with a **.**:
-
-	$ rm .
-
-But this too produces an error:
-
-	rm: "." and ".." may not be removed
-
-The problem is that we are in the directory and we are not allowed to cut off the branch on which we are sitting.  So, we must go up one level and try again:
-
-	$ cd ..
-	$ rm Terminal_Testing
-
-We will once again be presented with an error:
-
-	rm: Terminal_Testing/: is a directory
-
-This indicates that we must remove this with the "recursive" flag for directories:
-
-	$ rm -r Terminal_Testing
-
-[Alternatively the **rmdir** command could be used but why introduce a new command when this one will do the trick?]
-
 There are still two left over folders in the current directory though, "Terminal" and "Testing".  We could delete these one by one but there is a faster way: using wildcards.
 
 	$ rm -r Te*
@@ -316,16 +388,6 @@ There are still two left over folders in the current directory though, "Terminal
 
 >**Answer:** Everything in the directory that we have permission to delete would be gone.
 
-It is important to note that you will often be prevented from deleting crucially important files because you are just a regular user on the account and not logged in as the *super user*.  It is possible to become the super user on most systems by entering the command **sudo** in front of any other command.  For those working as system administrators on UNIX-like systems a common workflow is the following:
-
-	$ tell the computer to do X
-	computer says "No, you don't have permission"
-	$ sudo tell the computer to do X
-	the computer does it (after the right password is entered)
-
->**Question:** What would happen if the command issued was **rm -rf /**?
-
->**Answer:** *Everything* goes since you are telling the computer to *recursively* remove everything in the root folder.  To see some "real-world" consequences of this see [this unfortunate forum post](http://serverfault.com/questions/587102/monday-morning-mistake-sudo-rm-rf-no-preserve-root).
 
 ### Renaming Files
 
@@ -333,10 +395,9 @@ It is good practice to have a file extension on the end of file names to indicat
 
 	$ mv Important_Ideas Important_Ideas.txt
 
-
 This is another example of how a tool with one function (moving files) can be used to do something that on the outside seems to be different from what we want but turns out to be exactly what is wanted (renaming = *moving* a file from its current name to another name).
 
-## Plumbing & Searching
+## "Real World" Examples
 
 ### Getting Files from the Internet
 
@@ -348,7 +409,7 @@ We need a file to do some manipulation with.  There are three standard ways to d
 
 We will use option #1 but it really doesn't matter as long as each program is installed.  Here's how to do it with curl:
 
-	$ curl -L -O http://bit.ly/2qaCqW7
+	$ curl -L -O http://bit.ly/2iFMx1M
 
 <!-- This link is to a copy of Moby Dick that is held inside the new 2017-05-15-ualberta GitHub repository. -->
 
@@ -356,19 +417,19 @@ The "-L" flag tells curl to follow redirects and the "-O" (a capital letter o an
 
 Let's see what this file is:
 
-	$ cat 1TTicb6
+	$ cat 2iFMx1M
 
 Whoa! That's a lot of text.  Fortunately there is a command just looking at the top of a document:
 
-	$ head 1TTicb6
+	$ head 2iFMx1M
 
 So, we can now see that this is Moby Dick.  We can control how much text we see by passing a number as a flag to head and we'll then only see that many lines.
 
-	$ head -3 1TTicb6
+	$ head -3 2iFMx1M
 
 If there is a command called "head" that will show the top of the file then perhaps there is command called "tail" that will show the bottom of the file and indeed there is:
 
-	$ tail 1TTicb6
+	$ tail 2iFMx1M
 
 "1TTicb6" is really a terrible file name.  Let's do something about it.
 
@@ -376,7 +437,7 @@ If there is a command called "head" that will show the top of the file then perh
 
 >**Answer:**
 >
->	$ mv 1TTicb6 MobyDick.txt
+>	$ mv 2iFMx1M MobyDick.txt
 >	
 >	$ cp MobyDick.txt MobyDick-BackUp.txt
 
@@ -386,12 +447,9 @@ Let's find all the instances of 'whale' in MobyDick.txt.
 
 	$ grep whale MobyDick.txt
 
-**grep** is the command to use a regular expression search tool on a specified set of files.  While it looks like we are passing it a work what we are really doing is passing it a set of characters in the form of a "regular expression".  While what we will be doing here will mostly consist of the word "whale" you need to see what they can do and for that we need to do two things:
+[Here we should spend a little bit of time focusing on getting only the word whale and not other words that don't count' like "whaler".  This will prompt reminding them about the pipe character. At this point spend a little bit of time showing them how [https://regex101.com/]() works so that they can just what is happening and get an idea for what they can do in the future.  Make sure to point out the the quick reference menu and that they can overburden the tool by dumping too much text in the data panel.]
 
-1. Go to the course website and copy all the text under the **General Information** section.
-2. Go to [**http://regexpal.com**](http://regexpal.com) and paste that text into the box that says "Write your data here..."
-
-[At this point spend a little bit of time showing them how RegexPal works so that they can just what is happening and get an idea for what they can do in the future.  Make sure to point out the the quick reference menu and that they can overburden the tool by dumping too much text in the data panel.]
+The regex solution is: `\b[Ww]hales?\b`
 
 We can have it provide line numbers (like **cat**) with the -n flag
 
