@@ -1,6 +1,7 @@
 To add...
 
 1. Build slides for the challenge/comprehension questions
+2. Add aside about existence and use of `find`
 
 # \*nix Walkthrough
 
@@ -15,14 +16,14 @@ Four things to make clear before heading into this workshop:
 3. Spaces matter
 4. Everything is a file
 
-Yes, these could be brought up throughout the workshop as they arise but there are enough pitfalls for participants without having these snags waiting for them too.
+Yes, these will be brought up throughout the workshop as they arise but there are enough pitfalls for participants without having these snags waiting for them too.
 
 ## Navigation
 Open a BASH terminal window and you'll see:
 	
-	some information about the user/system $ 
+	"some information about the user/system" $ 
 
-We'll ignore the "some information about the user/system" and just abbreviate this to "$".  If you type the command: `PS1='$ '` into your shell, your window should look like all the examples in this workshop.  This isn’t necessary to follow along (in fact, your prompt may have other helpful information you want to know about). This is up to you!
+We'll ignore the "some information about the user/system" and just abbreviate this to "$".  If you type the command: `PS1='$ '` into your shell, your window should look like all the examples in this workshop.  This isn’t necessary to follow along (in fact, your prompt may have helpful information you want to know about). This is up to you!
 
 Type:
 
@@ -39,11 +40,24 @@ Let's find out where we are:
 
 	$ whereami
 
-While it might seem like this would tell you where you are (within the directory structure of the system, not in the galaxy) it will fail with something like *whereami: command not found*.  This is an opportunity to reinforce the bazaar (not "bizarre") nature of Unix (a la Eric S. Raymond).
+While it might seem like this would tell you where you are (within the directory structure of the system, not in the galaxy) it will fail with something like *whereami: command not found*.
+
+So, the command we actually need is:
 
 	$ pwd
 
-This stands for "Print Working Directory" and you'll get something that looks like */Users/someusername*.  
+This stands for "Print Working Directory" and you'll get something that looks like */Users/someusername*.  But why?  Enter slides #1 and #2
+
+--
+
+###SLIDE 1 & 2: Cathedral vs Bazaar / Linux Flavours
+Take a moment here to share a brief history of GNU-Linux.  Core points:
+
+1. How GNU-Linux Started (Richard Stallman)
+2. How it developed (Eric S. Raymond)
+3. Where it is now (Linux Flavours)
+
+--
 
 ### Looking Around
 
@@ -57,13 +71,13 @@ We'll see a list of files inside this directory.  Let's call this the "***l***�
 
 	$ ls -l
 
-*-a* will show all files in the directory.  *-l* will give a long format with more information.
+`-a` will show all files in the directory.  `-l` will give a long format with more information.
 
-What follows the **ls** command in the above examples are flags.  There are a lot of these.  To see what they are for each command you have two options:
+What follows the `ls` in the above examples are flags.  There are a lot of these.  To see what they are for each command you have two options:
 
-1. Use the man pages.  Show them how to do this using **q**, **h** (point out how to use **w** and **z** to move up and down).
+1. Use the man pages.  Show them how to do this using **q**, **h** (point out how to use **w** and **z** to move up and down by page rather than by line).
 
-	$ man ls
+		$ man ls
 
 2. Search on the Internet.
 
@@ -271,6 +285,8 @@ Whether you are trying to remember what you did or diagnosing what someone else 
 Lastly, you can run any line listed by the `history` command by typing an exclamation point and immediately following it with the appropriate line number.  For example, if on running `history` we were told that line number 301 was an a particular command that we wanted to run again then we could run that command again with
 
 	$ !301
+
+>**ASIDE:** `grep` is useful for searching _inside_ files but it is often helpful to be able to _find_ files in the first place.  For this we use `find`.
 
 We're now done in this directory so let's move back to  ~/Desktop/Software_Carpentry/.
 
