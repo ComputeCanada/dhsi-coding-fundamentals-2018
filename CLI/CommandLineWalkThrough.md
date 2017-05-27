@@ -1,8 +1,6 @@
-To add/modify: 
+To add...
 
-1. recall previous commands from history with !<History number> . Just ! for the last command.
-2. set up scripting piece to focus on producing a clean file first and then finding words in the clean file.  This represents the workflow better and will be a better set up for Dennis because I can just stop when the file is clean and he can start "hunting the whale."
-3. Build slides for the challenge/comprehension questions
+1. Build slides for the challenge/comprehension questions
 
 # \*nix Walkthrough
 
@@ -443,83 +441,93 @@ If there is a command called "head" that will show the top of the file then perh
 
 ### Regular Expressions
 
-Let's find all the instances of 'whale' in MobyDick.txt.
+Now that we know what file we have let's set ourselves a challenge: find all the instances of the word 'whale' in Moby Dick.
 
 	$ grep whale MobyDick.txt
 
-[Here we should spend a little bit of time focusing on getting only the word whale and not other words that don't count' like "whaler".  This will prompt reminding them about the pipe character. At this point spend a little bit of time showing them how [https://regex101.com/]() works so that they can just what is happening and get an idea for what they can do in the future.  Make sure to point out the the quick reference menu and that they can overburden the tool by dumping too much text in the data panel.]
-
-The regex solution is: `\b[Ww]hales?\b`
-
-We can have it provide line numbers (like **cat**) with the -n flag
+Which will give us each line with the character string whale on it.  We can have `grep` provide line numbers (like **cat**) with the -n flag:
 
 	$ grep -n whale MobyDick.txt
 
 While this tells us where the word "whale" is it does not tell us how many instances of "whale" there are.  For this we need to introduce the word count command.
 
-### Redirects
-
-There is a handy little tool that helps us count the words in a file:
-
 	$ wc MobyDick.txt
 	22108  215135 1257296 MobyDick.txt
 
-The output is in the order "word, line, character".  It is the sort of output that we might want to save for future use so we'll place the output in a file:
+>**QUESTION:** How can you figure out what the numbers mean?
+>
+>**ANSWER:** `man wc` or Google or some testing and the output is in the order "word, line, character".
 
-	$ wc MobyDick.txt > MobyWordCount.txt
+So we can count the number of lines that the character string whale appears on but...
 
-If we look in the directory (**ls**) we'll see a new file called "MobyWordCount.txt".  If we look inside it (**cat**) we'll see the output of the word count command.
+>**QUESTION:** What is wrong with the returned information?  What is it catching or overlooking that it shouldn't be?  Think about how you've seen `grep` work.
+>
+>**ANSWER:** There are two problems:
+>
+>1. Could be more than one instance on a line
+>2. We're grabbing things that aren't really the word "whale", such as "whalers"
+>
+>We'll deal with the second case first by writing a better regular expression, one that captures only "whale" or "whales".
 
-What has happened here is that the output of the word count command has been *redirected* from what is called "standard out" (aka "the screen") to a file that we specified.  The single greater-than symbol is the most basic redirect symbol, taking the output from the command on the left and passing it to the file on the right.
+Here we will spend a little bit of time focusing on getting only the word whale and not other words that don't count' like "whaler".  We'll visit [https://regex101.com/]() and work out the regular expression that should do the trick: `\b[Ww]hales?\b` [or `(\bWhale\b)|(\bWhales\b)|(\bwhale\b)|(\bwhales\b)].  
 
->**Question:** The single greater-than symbol is not the only redirection tool.  There is also the double greater-than symbol ">>".  What does it do?
+When we come back to the command line and try it though it will be prettry clear that it doesn't work since it returns nothing.  The problem is that we are running into some confusion around interpreting the special characters.  There are at least four remedies:
 
->**Answer:** The double greater-than symbol appends output to the bottom of the file rather than over-writing it.
+1. grep -n "\b[Ww]hales\?\b" MobyDick.txt
+2. grep -nw "[Ww]hales\? MobyDick.txt
+3. grep -n \\b[Ww]hales\\?\\b MobyDick.txt
+4. grep -nw [Ww]hales\\? MobyDick.txt
 
-### Pipes
+[The quotes in #1 and #2 ensure the entire expression is evaluated by grep instead of by the user's shell.  We could use single quotes as well, we just need to do so consistently.]
 
-Coming back to the problem at hand, we want to count the number of times "whale" shows up in the story.  To do this we'll need to combine both **grep** and **wc** together, taking the output of one and passing it to the other
+>**QUESTION:** How do we combine grep and wc to count the number of lines that "whale" appears on?
+>
+>**ANSWER:**
+>
+>	$ grep whale MobyDick.txt | wc
+>
+>	1274   15119   87694
 
-	$ grep whale MobyDick.txt | wc
-	1274   15119   87694
-
-The "|" is the "pipe" character and on most keyboards it can be found with the backslash character ("\") just above the ENTER key.  It can be accessed by holding SHIFT and pressing "\".  What it does is take the output of the command on the left and pass it as an input to the command on the right.  So, there are 1274 lines containing "whale".
-
-As it stands though it is finding every instance of *the character string* "whale" rather than every instance of *the word* "whale".  We can change ask it to search for words only by using the -w flag which will set the search to find one the specified string when it is wrapped in word boundaries (like spaces).
+So, there are 1274 lines containing "whale".
 
 	$ grep -w whale MobyDick.txt | wc
 	888   10591   60984
 
-So, it should be clear that the number of times the word "whale" is used is less that the number of times the character string "whale" is used.
+So, it should be clear that the number of times the word "whale" is used is less that the number of times the character string "whale" is used.  At this point we've solved the problem of not grabbing exactly the right content.
 
-We're still not done yet though.  Some lines might have "whale" appear in them more than once and we'd be missing those instances if they existed.  To overcome this problem we'll need to trick the **wc** command into counting words as lines and to do this we need to make it the case that every word gets its own line.  To do this we need to use the translate command, **tr**.  See what it does by trying the following
+We're still not done yet though since the first problem remains: some lines might have "whale" appear in them more than once and we're not counting those instances if they exist.  To overcome this problem we'll need to trick the `wc` command into counting words as lines.
 
-	$ tr ' ' '\n' < MobyDick.txt
+>**QUESTION:** What would we need to do to the MobyDick.txt file to use `wc` to count words (note that "what" is different from "how", we'll worry about the "how" next)?
+>
+> **ANSWER:** Make it the case that every word gets its own line.  
+
+Now that we know _what_ we need to do we can worry about _how_, which is answered as follows:
+
+	$ cat MobyDick.txt | tr ' ' '\n'
+
+>**ASIDE:** The above can also be accomplished by:
+>
+>	$ tr ' ' '\n' < MobyDick.txt
+>
+>Whether this is noted or used is a matter of assessing the current state of the class
 
 It has replaced every space with a newline character ("\n").
 
->**Question:** How can **tr** be used with **wc** to output the number of lines?
-
+>**Question:** How can **tr** be used with **wc** to output the number of lines?  **HINT:** Multiple pipes.
+>
 >**Answer:**
+>
+>	$ cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
 
-	$ tr ' ' '\n' < MobyDick.txt | grep -w whale | wc -l
-	
-*or*
-
-	$ cat MobyDick.txt > tr ' ' '\n' | grep -w whale | wc -l
-
->**Question:** How can this be modified to search for any word on all the files in a directory?
-
->**Answer:**  What you are really being asked to do at this point is write a program because doing it over and over by hand would cost a lot of time with a lot of potential for human error.  Let's look at how to do this now.
+Four commands chained together to process your file is pretty sophisticated.  It's also pretty simple once you understand how the redirects work and know the commands.  It gets even better when you can turn it into a script and generalize it such that you can pass it _any_ regular expression and _any_ file...
 
 ## Scripting
-[Goal here is to have them build a program by hand to answer the previous challenge.  We'll do this line by line, no black boxes.]
 
-Everything that we have done so far can be wrapped up into a simple program called a script.  The term "script" is usually reserved for short programs that tell other programs or tools what to do.  Think of them as recipes of instructions.  
+Everything that we have done so far can be wrapped up into a simple program called a script.  The term "script" is usually reserved for short programs that tell other programs or tools what to do.  It might be useful to think of them as recipes.
 
 Note that there are different languages that scripts can be written in.  In this lesson we're working with Bash so we'll be doing *Bash Scripting*.  Other  languages, such as Python, R, Ruby, Java, etcetra, have their own syntax.  Regardless the general principles remain the same.
 
-Let's see how Bash Scripts work by solving the problem given at the end of the previous section.
+We'll see how Bash Scripts work by generalizing the solution given at the end of the previous section.
 
 ### Building and running a simple program
 
@@ -531,7 +539,7 @@ Note the use of the ".sh" at the end of the file name.  This extension is typica
 
 Once inside nano type the following (note that you could copy and paste from the terminal in advance) and then exit and save the file:
 
-	tr ' ' '\n' < MobyDick.txt | grep -w whale | wc -l
+	cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
 
 If we look in the directory now we'll see a new file:
 
@@ -543,7 +551,7 @@ We can check the content of this new file with `cat`:
 
 	$ cat corpusWordCounter.sh
 	
-	tr ' ' '\n' < MobyDick.txt | grep -w whale | wc -l
+	cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
 
 We can run it by doing the following:
 
@@ -552,6 +560,8 @@ We can run it by doing the following:
 	907
 
 Typing `bash` tells Bash (our shell/terminal environment) to interpret the contents of "corpusWordCounter.sh" as instructions given on the command line and to run each line as such.  We can stack any number of lines in this file and then execute them sequentially.
+
+[Note that some users might want to make this script an executable file.  To do this it will be necessary to use `chmod` and to put the bash signifier at the top of the file, which I currently can't remember the exact syntax of or I'd write it in... I'll come back to this.  Or look it up if needed.]
 
 ### Telling people what you are doing
 Writing scripts is a really excellent way to economize on time.  A little bit of effort put in upfront will have a lot of returns in the future by handling repetitive tasks quickly.  This benefit is lost if looking at the script in six months requires puzzling through what it does and why or figuring out how exactly it fits into the workflow again.  Adding comments to the script is a way to overcome this.
@@ -571,7 +581,7 @@ Using nano we can change the content of corpusWordCounter.sh to read:
 	# Author: Your Name
 	# Last modified: February 16, 2016
 	
-	tr ' ' '\n' < MobyDick.txt | grep -w whale | wc -l
+	cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
 
 If we run corpusWordCounter.sh again using `bash` we see no difference in the output.  This is as it should be since comments are ignored by the execution engine.
 
@@ -597,7 +607,7 @@ In our script we will use nano to replace "whale" with `"$1"`:
 	# Author: Your Name
 	# Last modified: February 16, 2016
 	
-	tr ' ' '\n' < MobyDick.txt | grep -w "$1" | wc -l
+	cat MobyDick.txt | tr ' ' '\n' | grep -w "$1" | wc -l
 
 Now, if we wanted to run the script to search for the word "horse" we would run:
 
@@ -609,7 +619,7 @@ If we wanted to specify exactly which text to search the word for we could do th
 	# Author: Your Name
 	# Last modified: February 16, 2016
 	
-	tr ' ' '\n' < "$2" | grep -w "$1" | wc -l
+	 cat "$2" | tr ' ' '\n' | grep -w "$1" | wc -l
 
 Note that the description was also updated to make it clear what the syntax is for running the script.  Making sure that your instructions remain accurate and useful is important for saving your future self from frustration.
 
@@ -671,7 +681,7 @@ Now, if we want to do any processing of the MobyDick.txt file or any other such 
 
 >**Answer:**
 
-	$ tr ' ' '\n' < MobyDick-Clean.txt | grep -w whale | wc -l
+	$ cat MobyDick-Clean.txt | tr ' ' '\n' | grep -w whale | wc -l
 	907
 
 Point out that there is *still* some additional text that could be culled (just run a **tail** on MobyDick-Clean.txt to see) but what matters is the process.  You could refine this.
@@ -833,22 +843,28 @@ If you have aptitude installed try, in sequence:
 	aptitude -vvv moo
 	aptitude -vvvv moo
 
-play NetHack on line at https://alt.org/nethack/
+play NetHack on line at [https://alt.org/nethack/]()
 
-The program rev which is part of the util-linux package reverses any
-text you feed to it:
+The command `rev` which is part of the util-linux package reverses any text you feed to it:
+
 	fortune | rev
-	.retteb hcum ,hcum ylno ... won thgir era uoy erehw ekil yltcaxe si esidaraP
-nosrednA eiruaL --
+	.retteb hcum ,hcum ylno ... won thgir era uoy erehw ekil yltcaxe si esidaraPnosrednA eiruaL --
 
-install `links` or `lynx` to browse the web
+Install `links` or `lynx` to browse the web
 
-ssh sshtron.zachlatta.com
+Visit:
+
+	ssh sshtron.zachlatta.com
+
 Then compete! Use WASD or HJKL (vim) to move the specific direction.
 
-telnet towel.blinkenlights.nl
+	telnet towel.blinkenlights.nl
 
-## One last thing
+## One last thing to add
+
+How to get your terminal to have fancy colours and other formatting when looking at files _and_ how to remove this should you want to not have people get all worked up because their screen doesn't look like yours and you don't want to go down that path because it is really a rabbit hole for another time... =)
+
+## One last thing to remember
 
 Before we move to looking at version control and a programming language you'll likely find it useful to save a list of all the commands that you have used so far.  You can do this by navigating to a directory where you would like to save them and then running the *history* command with a redirect to a file.
 
