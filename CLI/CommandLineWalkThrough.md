@@ -82,7 +82,7 @@ What follows the `ls` in the above examples are flags.  There are a lot of these
 2. Search on the Internet.
 
 
->**Question:** What will *ls -al* do?
+>**Question:** What will `$ ls -al` do?
 
 >**Answer:** List all the files in a long format.
 
@@ -106,37 +106,33 @@ Have them look in the root directory with:
 
 	$ ls /
 
+--
+###Slide 3: Discovering Flag Properties
+
 >**Comprehension Test:** What do the flags -s, -h, and -r do when combined with the ls command?
 
 >**Answer:** They can look these up using **man ls** or just try them out.
 
+--
 
 Remember `man -k search_word` for finding `man` commands.  You may need to be creative with the terms you use.
 
 ### Moving Around
 
-The change directory command (**cd**) can be substituted for the list directory structure (**ls**) command with everything you have learned so far.
+The change directory command `cd` can be substituted for the list directory structure `ls` command with everything you have learned so far.
 
 >**Challenge:** Go to the root directory
 
->**Solution:** Use the **cd** command with the root directory shortcut **/**.
+>**Solution:** `$ cd /`
 
 After this challenge a bigger problem faces the students: how to get back the where they were.  The long way would be to figure out the the directory structure with tab completion.  Better would be to "just know" the directory structure but this takes a long time.  Fortunately there is the shortcut:
 
- $ cd ~
+	$ cd ~
 
 The "~" is the "tilde" character and it is usually found with the "backtick" character under the ESC key.  It can be accessed by holding SHIFT and pressing "\`".
 
-> **Comprehension Test:** What does the command **cd** without a directory name do?
-
-> 1. It has no effect.
-> 2. It changes the working directory to /.
-> 3. It changes the working directory to the user’s home directory.
-> 4. It produces an error message.
-> **Answer:** 3.
-
-
-<!-- -->
+--
+###Slide 4: Going Home
 
 > **Comprehension Test:**
 For a hypothetical filesystem location of **/home/amanda/data/**, select each of the below commands that Amanda could use to navigate to her home directory, which is **/home/amanda**
@@ -153,12 +149,18 @@ For a hypothetical filesystem location of **/home/amanda/data/**, select each of
 
 > **Answer:** 3, 5, 9
 
+--
 
-<!-- -->
+###Slide 5: Translation 1
+>**QUESTION:** If someone is in /Users/nelle/ then how do they get to /Users/larry/ using cd and a relative address?
+>
+>**ANSWER:** `cd ../larry`
+
+--
 
 ## Creation & Destruction
 
-Start this section by having each user navigate to their *Desktop directory*.
+Start this section by having each user navigate to their equivalent of `$ cd ~/Desktop/`.
 
 ### Creating Directories
 
@@ -173,12 +175,12 @@ Point out that they can swap between windows with CMD-TAB (MAC) / ALT-TAB (WINDO
 Since we are doing command line now and python later we should create a command line folder.  Let's move into the Carpentry directory, make a command line folder and then check that it exists:
 
 	$ cd Carpentry
-	$ mkdir Command Line
+	$ mkdir Command Line Code
 	$ ls
 
 Wait... Folder_S_!?!  What happened?
 
-The **ls** command will show that we have made a mistake: there are *two* directories---one called "Command" and the other called "Line"---rather than one "Command Line" directory.  This highlights two important things for the class to remember:
+The **ls** command will show that we have made a mistake: there are *three* directories---one called "Command", another called "Line", and another called "Code"---rather than one "Command Line" directory.  This highlights two important things for the class to remember:
 
 1. The computer does what you tell it, not necessarily what you wanted.
 2. Spaces matter on the command line, they are punctuation.
@@ -201,7 +203,13 @@ Let's make the proper directory using underscores, move into that directory, cre
 
 We are now going to make a file.  It is important for the participants to note that what matters here is that *they can create a text file* not what tool they use to make that text file.  We will use **nano** because it is simple, has the instructions listed on the bottom of the screen, and keeps us in the terminal window (which is convenient, that's all), *beyond these reasons there is nothing special about nano*.  What matters is that the tool they choose is a **TEXT EDITOR** and that they can use it.  If they want to use another terminal program (like vim or emacs) or a GUI tool (like TextWrangler, Sublime, or Notepad++) that's just fine.  They need to know that they cannot use tools like Word or LibreOffice because they hide other content even though they look like plain text.
 
-> If people are using MobaXterm or some other shell that doesn't have nano installed by default then they can likely get it with one of the following commands:`$ apt-get install nano`;`$ yum install nano`
+> If people are using MobaXterm or some other shell that doesn't have nano installed by default then they can likely get it with one of the following commands:
+> 
+> `$ apt-get install nano`
+> 
+> or
+> 
+> `$ yum install nano`
 > 
 > apt-get and yum are package management tools that are likely installed already that can be used to install other software, in this case the text editor Nano.
 
@@ -228,7 +236,7 @@ This can get annoying though and of course there is a command to show the conten
 
 	$ cat Important_Ideas1
 
-**cat** is the concatenate files command.  Concatenation is a join operator.  The command also prints out the consequences of the concatenation to the screen.  If you only give it one file then it just spits back that one file.  This is a great example of tools being very useful but not quite in the way that their name or historical purpose might suggest.
+`cat` is the command to concatenate files.  Concatenation is a join operator.  The command also prints out the consequences of the concatenation to the screen.  If you only give it one file then it just spits back that one file.  This is a great example of tools being very useful but not quite in the way that their name or historical purpose might suggest.
 
 >**Question:** What will the *-n* flag do when run with **cat**?
 
@@ -238,9 +246,18 @@ This can get annoying though and of course there is a command to show the conten
 
 Have participants make a new file called "Important_Ideas2" and add some new ideas to it.
 
->**Question:** How can we print the content of Important_Ideas1 and Important_Ideas2 on the screen _as if_ they were a single file?
+>**QUESTION:** How can we print the content of Important_Ideas1 and Important_Ideas2 on the screen _as if_ they were a single file?
 >
->**Answer**: `$ cat Important_Ideas1 Important_Ideas2`
+>**ANSWER:** `$ cat Important_Ideas1 Important_Ideas2`
+
+--
+###Slide 6: Describing command line format
+
+>**QUESTION:** If you were asked to describe the format of a command on the command line what would you say?
+>
+>**ANSWER:** They should answer this by talking to someone beside them, actually describing the structure, until they both agree.
+
+--
 
 ### Redirecting Standard Out
 
@@ -312,12 +329,13 @@ Let's start by getting rid of the folders in this directory that we don't need. 
 Which should show us something like:
 
 	...
+	Code
 	Command
 	Line
 	Command_Line
 	...
 
-We want to remove the two accidental folders.  We can do this using the `rm` command, which _removes_ files from the system.  Let's start by testing this with a new junk file:
+We want to remove the three accidental folders.  We can do this using the `rm` command, which _removes_ files from the system.  Let's start by testing this with a new junk file:
 
 	$ touch junkFile
 	
@@ -330,9 +348,9 @@ Once you have confirmed that the file is there let's remove it and then check th
 	
 ##### There is _no_ recycle bin on the command line.  Once you "rm" something it is truly gone (except for the possibility of some very advanced forensics).
 
-Let's try and remove the directories Command and Line:
+Let's try and remove `Line/` (We'll save `Command` and `Code` for a little trick):
 
-	$ rm Command Line
+	$ rm Line
 
 Running this command gives us a warning though and will not complete.  We are told that these are directories.  Directories are just files at their core but they are special files that hold/point to other files and so we cannot simply delete them without deleting their contents.
 
@@ -342,28 +360,47 @@ Running this command gives us a warning though and will not complete.  We are to
 
 What is holding us back are the . and .. files.  If you try to delete them you will be told: `"." and ".." may not be removed` (Think about sitting at the end of a tree branch and cutting it off).  What we need is a special flag to use with the `rm` command.  That flag is `-r` which is the "recursive" flag, telling the command to enter a directory and remove everything inside it, all the way to the bottom.  Let's try it
 
-	$ rm -r Command Line
+	$ rm -r Line
 	$ ls
 
-And they are gone.
+And it is gone.
+
+Note that like `cat` we can pass multiple files at the same time to `rm` and it will delete each one.  If you have a lot of files to delete the this can still be tedious.  Fortunately there is a wild card character.  Let's test it with some junk files:
+
+	$ touch junk1 junk2 junk3
+	$ ls
+	$ rm junk*
+	$ ls
+	
+Nice.  Now let's remove `Command/` and `Code/`:
+
+	$ rm Co*
 
 ##### Only _think_ about the next question.  Do not figure it out by running it.
 
->**Question:** What would happen if the command issued was **rm -rf /**?
+--
+### Slide7: A serious mistake
+>**Question:** _Without running this command_, what would happen if the command issued was `$ rm -rf /`?
 
 >**Answer:** *Everything* goes since you are telling the computer to *recursively* remove everything in the root folder.  For some "real-world" consequences see [this unfortunate forum post](http://serverfault.com/questions/587102/monday-morning-mistake-sudo-rm-rf-no-preserve-root).  It is possible that you will have some permission or other security mechanisms in place to prevent this but if you are a full administrator it can be done.
 >
+
+--
+###Slide 8: Make me a sandwich
 >Often you will be prevented from doing dangerous things---like deleting crucially important files---because you are just a regular user and not logged in as the *super user*.  It is possible to become the super user on most systems by entering the command **sudo** in front of any other command.  For those working as system administrators on UNIX-like systems a common workflow is the following:
 
 	$ tell the computer to do X
 	computer says "No, you don't have permission"
 	$ sudo tell the computer to do X
 	the computer does it (after the right password is entered)
+	
 > You can try sudo with _any_ command to see how it works.  Let's try it with `ls`
 	
 	$ sudo ls
 	Password:
 	<list of directory contents>
+
+> [XKCD](https://xkcd.com/149/) has a nice little web comic to bring home how `sudo` is used.
 	
 Let's finish up by looking in the Command_Line folder using ls:
 
@@ -376,32 +413,18 @@ Which will give output that looks like:
 	Important_Ideas2
 	history.txt
 
-We really don't need Important_Ideas1 or Important_Ideas2.  We could delete them but maybe we want to keep them around a while, just not in this directory. So, let's create a new directory called "recycle" inside the current directory and move the files in.  You already know how to create a directory.  The move command is `mv` and you know how to figure out how commands work so go to it.  =)
+We really don't need Important_Ideas1 or Important_Ideas2.  We could delete them but maybe we want to keep them around a while, just not in this directory. So, let's create a new directory called "recycle" inside the ~/Desktop/Carpentry directory and move the files in.  You already know how to create a directory.  The move command is `mv` and you know how to figure out how commands work so go to it.  =)
+
+	$ mkdir ../recycle/
+	$ mv I*1 I*2 ../recycle/
+	
+Note the use of the `*` as a wild card character.  Also note that here the syntax with the list of files is that the _last_ file is where all those before it are put.
 
 The directory structure of Command_Line should now look like:
 
 	$ ls
 	Important_Ideas
 	history.txt
-
-We should really have a .txt on the end of Important_Ideas.  How do we get it there?
-
->**Comprehension Test:** If **cp** is the copy command then how do we make a copy of the file *Important_Ideas* up one directory?
-
->**Answer:**
-
-	$ cp Important_Ideas ../
-
-Note the structure of the command.
-
-There are still two left over folders in the current directory though, "Terminal" and "Testing".  We could delete these one by one but there is a faster way: using wildcards.
-
-	$ rm -r Te*
-
->**Question:** What would happen if the command issued was **rm -r * <!-- -->**?
-
->**Answer:** Everything in the directory that we have permission to delete would be gone.
-
 
 ### Renaming Files
 
@@ -417,8 +440,8 @@ This is another example of how a tool with one function (moving files) can be us
 
 We need a file to do some manipulation with.  There are three standard ways to do this:
 
-1. Use **curl**. (Installed on OSX, MobaXterm, and many Linux flavours by default)
-2. Use **wget**. (Not installed on OSX by default)
+1. Use `curl`. (Installed on OSX, MobaXterm, and many Linux flavours by default)
+2. Use `wget`. (Not installed on OSX by default)
 3. Use your browser and save it to a directory
 
 We will use option #1 but it really doesn't matter as long as each program is installed.  Here's how to do it with curl:
