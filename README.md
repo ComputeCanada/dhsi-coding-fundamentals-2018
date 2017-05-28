@@ -105,7 +105,7 @@ We will spend the day working with the terminal, learning the basics of the file
 
 ## Day 2: Python I (5.5 hrs)
 
-- 2.1 **Python Programming for Everyone**
+- [2.1 **Python Programming for Everyone**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.1/Section%202.1%20README.md)
 
     - 2.1.1 Why do I need to know how to program?
     - 2.1.2 Variables, Expressions, and Statements
