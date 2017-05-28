@@ -119,13 +119,13 @@ We will spend the day working with the terminal, learning the basics of the file
     - 2.1.10 Tuples
     - 2.1.11 Object-oriented Programming
 
-- 2.2 **Getting Help**
+- [2.2 **Getting Help**]((https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.2/Section%202.2%20README.md))
 
   - 2.2.1 Python.org website
   - 2.2.2 StackExchange
   - 2.2.3 Books
-  - 2.2.4 Google
-  - 2.2.5 Help Desk (maybe)
+  - 2.2.4 Online Education
+  - 2.2.5 Google
 
 - 2.3 **Preparing for Tomorrow**
 

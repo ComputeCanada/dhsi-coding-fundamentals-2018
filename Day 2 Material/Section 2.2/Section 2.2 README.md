@@ -1,0 +1,90 @@
+## Section 2.2 Getting Help
+
+Getting help with questions or problems that you have with the Python can be quite easy, you just have to know where to look. The following areas are great places to start looking for help and asking questions. 
+
+
+### 2.2.1 Python.org website
+
+The main [Python](https://www.python.org) website contains everything you ever wanted to know about Python, including:
+
+1. [Beginner's Guide about Downloading and Installing Python](https://wiki.python.org/moin/BeginnersGuide/Download)
+2. [Beginner's Guide for Non-Programmers](https://wiki.python.org/moin/BeginnersGuide/NonProgrammers)
+3. [Code Examples for Beginners](https://wiki.python.org/moin/BeginnersGuide/Examples)
+4. [Complete Python Documentation](https://docs.python.org/3/)
+5. [Frequently Asked Questions](https://docs.python.org/3/faq/)
+6. [Python Mailing Lists](https://www.python.org/community/lists/), including the [Python-Help](https://mail.python.org/mailman/listinfo/python-help) mailing list where you can post all sorts of questions about Python and volunteer experts will reply.
+7. [The Python Wiki](https://wiki.python.org/moin/)
+
+
+### 2.2.2 StackExchange and Stack Overflow
+
+Both StakeExchange and Stack Overflow are great Q&A websites to go to for help. Without signing up for an account, you can look through the questions and answers already posted. With an account, you can post your own questions for other to answer.
+
+1. [Python Documentation](https://stackoverflow.com/documentation/python/topics)
+2. [Questions with Python Tags](https://stackoverflow.com/questions/tagged/python)
+3. [StackExchange's Python Code Review](https://codereview.stackexchange.com/questions/tagged/python)
+
+
+### 2.2.3 Books
+
+Everyone and their mother has written a book about Python! The best publisher for technical books is [O'Reilly](https://www.oreilly.com). [Safari Books Online](https://www.safaribooksonline.com/?utm_medium=content&utm_source=oreilly.com&utm_campaign=lgen&utm_content=20170505+homepage+get+started+now) is O'Reilly's "technology and business learning platform." Both academic and public libraries have access to Safari Books Online for free, but you can also sign-up for a trial version.
+
+**Books by O'Reilly:**
+
+1. *Think Python*, 2nd Edition, by Allen B. Downey
+2. *Python Pocket Reference*, 5th Edition, by Mark Lutz
+2. *Introducing Python*, by Bill Lubanovic
+2. *Python in a Nutshell*, 3rd Edition, by Alex Martelli, Anna Ravenscroft, and Steve Holden
+3. *Learning Python*, 5th Edition, by Mark Lutz
+3. *Python Cookbook*, 3rd Edition, by David Beazley and Brian K. Jones
+3. *The Hitchhiker's Guide to Python*, by Kenneth Reitz and Tanya Schlusser
+2. *Fluent Python*, by Luciano Ramalho
+3. *High Performance Python*, by Micha Gorelick and Ian Ozsvald
+3. *Web Scraping with Python*, by Ryan Mitchell
+3. *Python Data Science Handbook*, by Jake VanderPlas
+4. *Python for Data Analysis*, by Wes McKinney
+4. *Foundations for Analytics with Python*, by Clinton W. Brownley
+5. *Data Wrangling with Python*, by Jacquiline Kazil and Katharine Jarmul
+4. *Data Visualization with Python and Javascript*, by Kyran Dale
+5. *Natural Language Processing with Python*, by Steven Bird and Ewan Klein
+5. *Thoughtful Machine Learning with Python*, by Matthew Kirk
+3. *Python for Finance*, by Yves Hilpisch
+
+**Books by no starch press**
+
+1. *Automate the Boring Stuff with Python*, by Al Sweigart
+2. *Python Crash Course*, by Eric Matthews
+3. *Python Playground*, by Mahesh Venkitachalam
+4. *Doing Math with Python*, by Amit Saha
+5. *Invent Your Own Computer Games with Python*, by Al Sweigart
+
+**Other Books**
+
+1. *Python Machine Learning*, by Sebastian Raschka
+2. *Practical Programming: An Introduction to Computer Science Using Python 3*, by Paul Gries, Jennifer Campbell, and Jason Montojo
+3. *Python for Dummies*, by Stef Maruch and Aahz Maruch
+4. *Python Essential Reference*, 4th Edition, by David Beazley
+5. *Head First Python*, by Paul Barry
+6. *Python for Data Science for Dummies*, by John Paul Mueller and Luca Massaron
+7. *Beginning Programming with Python for Dummies*, by John Paul Mueller
+8. *Python for Everybody*, by Charles Severance
+
+
+### 2.2.4 Online Education
+
+There are several places online where you can learn more about Python, or even refresh what you may have forgotten. The majority of these courses are free. Others may be accessible via your academic or public library.
+
+1. [Python Courses](https://www.coursera.org/courses?languages=en&query=python) on Coursera
+2. [Python Courses](https://www.codecademy.com/learn/python) on Code Academy
+3. [Google's Python Class](https://developers.google.com/edu/python/)
+4. [Python Tutorial](https://www.learnpython.org) on LearnPython.org
+5. [Programming Foundations with Python](https://www.udacity.com/course/programming-foundations-with-python--ud036) on Udacity
+6. [Introduction to Programming with Python](https://alison.com/course/Introduction-to-Programming-with-Python) on Alison.com
+7. [Python Courses](https://www.edx.org/course/subject/computer-science/python) on edX
+8. [Python Training and Tutorials](https://www.lynda.com/Python-training-tutorials/415-0.html) on Lynda.com
+
+
+### 2.2.5 Google
+
+When all else fails, search for your issue on Google. For example, if you get an error message, use the message as your search term. Or if you want to know more about a specific function, use the name of the function as your search term.
+
