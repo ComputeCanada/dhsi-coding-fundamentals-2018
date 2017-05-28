@@ -22,73 +22,131 @@ Each of the following sub-sections reference material in two different books: [*
 
 ### 2.1.1 Why do I need to know how to program?
 	
-	a. What is a program?
-	b. Problem Solving
-	c. Vocabulary & Languages
-	d. Python on the Command Line
-	e. Hello World!
-	f. Arithmetic
-	g. Errors & Debugging
+1. What is a program?
+2. Problem Solving
+3. Vocabulary & Languages
+4. Python on the Command Line
+5. Hello World!
+6. Arithmetic
+7. Errors & Debugging
 
-	[Slides](link to slides)
-	[Command Line Screenshots](link to screenshots)
-	[Exercises](link to exercises)
+[Slides](link to slides)
+[Command Line Screenshots](link to screenshots)
+[Exercises](link to exercises)
 
 ### 2.1.2 Variables, Expressions, and Statements
 
-	a. Values & Types
-	b. Variables
-	c. Statements
-	d. Operators & Operands
-	e. Expressions
-	f. Order of Operations
-	g. String Operations
-	h. Comments
+1. Values & Types
+2. Variables
+3. Statements
+4. Operators & Operands
+5. Expressions
+6. Order of Operations
+7. String Operations
+8. Comments
 
-	[Slides for 2.1.2](link to slides)
-	[Walkthrough for 2.1.2](link to Jupyter Notebook)
-	[Exercises](link to exercises)
+[Slides for 2.1.2](link to slides)
+[Walkthrough for 2.1.2](link to Jupyter Notebook)
+[Exercises](link to exercises)
 
 ### 2.1.3 Conditional Expressions, i.e., IF statements 
+
+1. Boolean Expressions
+2. Logical Operators
+3. Conditional Execution
+4. Alternative Execution
+5. Chained Conditionals
+6. Nested Conditionals
 
 
 ### 2.1.4 Functions
 
-
+1. Function Calls
+2. Built-in Functions
+3. Math Functions
+4. Adding New Functions
+5. Definition of Uses
+6. Flow of Execution
+7. Parameters & Arguments
+8. Fruitful Functions & Void Functions
 
 
 ### 2.1.5 Iterations and Loops
 
-
+1. WHILE Loops
+2. Infinite Loops
+3. "continue"
+4. FOR Loops
+5. Loop Patterns
 
 
 ### 2.1.6 Strings
 
-
-
+1. What is a string?
+2. "len" Function
+3. Loops & Strings
+4. Slicing Strings
+5. String are Immutable
+6. "in" Operator
+7. String Comparisons
+8. "String" Methods
+9. Parsing Strings
+10. Format Operator
 
 
 ### 2.1.7 Files
 
-
-
+1. Opening Files
+2. Text Files & Lines
+3. Reading Files
+4. Searching Files
+5. User Input
+6. "try" | "except" | "open"
+7. Writing Files
+8. Closing Files
 
 
 ### 2.1.8 Lists
 
-
-
+1. What are lists?
+2. Traversing
+3. List Operations
+4. List Slices
+5. List Methods
+6. Deleting
+7. Lists & Functions
+8. Lists & Strings
+9. Parsing
+10. Objects & Values
+11. Aliases
+12. Arguments
 
 
 ### 2.1.9 Dictionaries
 
-
+1. What is a dictionary?
+2. Dictionaries & Files
+3. Dictionaries & Loops
+4. Dictionaries & Lists
+5. Parsing
 
 
 ### 2.1.10 Tuples
 
-
+1. What is a tuple?
+2. Comparing Tuples
+3. Tuple Assignments
+4. Dictionaries & Tuples
+5. Multiple Assignments
+6. Lists & Tuples
 
 
 ### 2.1.11 Object-oriented Programming
 
+1. Putting it All Together
+2. Using Objects
+3. Programs
+4. Encapsulation
+5. Classes as Types
+6. Object Lifecycle
+7. Inheritance
