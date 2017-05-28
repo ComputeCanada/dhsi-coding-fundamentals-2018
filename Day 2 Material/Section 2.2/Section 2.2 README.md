@@ -33,22 +33,22 @@ Everyone and their mother has written a book about Python! The best publisher fo
 
 1. *Think Python*, 2nd Edition, by Allen B. Downey
 2. *Python Pocket Reference*, 5th Edition, by Mark Lutz
-2. *Introducing Python*, by Bill Lubanovic
-2. *Python in a Nutshell*, 3rd Edition, by Alex Martelli, Anna Ravenscroft, and Steve Holden
-3. *Learning Python*, 5th Edition, by Mark Lutz
-3. *Python Cookbook*, 3rd Edition, by David Beazley and Brian K. Jones
-3. *The Hitchhiker's Guide to Python*, by Kenneth Reitz and Tanya Schlusser
-2. *Fluent Python*, by Luciano Ramalho
-3. *High Performance Python*, by Micha Gorelick and Ian Ozsvald
-3. *Web Scraping with Python*, by Ryan Mitchell
-3. *Python Data Science Handbook*, by Jake VanderPlas
-4. *Python for Data Analysis*, by Wes McKinney
-4. *Foundations for Analytics with Python*, by Clinton W. Brownley
-5. *Data Wrangling with Python*, by Jacquiline Kazil and Katharine Jarmul
-4. *Data Visualization with Python and Javascript*, by Kyran Dale
-5. *Natural Language Processing with Python*, by Steven Bird and Ewan Klein
-5. *Thoughtful Machine Learning with Python*, by Matthew Kirk
-3. *Python for Finance*, by Yves Hilpisch
+3. *Introducing Python*, by Bill Lubanovic
+4. *Python in a Nutshell*, 3rd Edition, by Alex Martelli, Anna Ravenscroft, and Steve Holden
+5. *Learning Python*, 5th Edition, by Mark Lutz
+6. *Python Cookbook*, 3rd Edition, by David Beazley and Brian K. Jones
+7. *The Hitchhiker's Guide to Python*, by Kenneth Reitz and Tanya Schlusser
+8. *Fluent Python*, by Luciano Ramalho
+9. *High Performance Python*, by Micha Gorelick and Ian Ozsvald
+10. *Web Scraping with Python*, by Ryan Mitchell
+11. *Python Data Science Handbook*, by Jake VanderPlas
+12. *Python for Data Analysis*, by Wes McKinney
+13. *Foundations for Analytics with Python*, by Clinton W. Brownley
+14. *Data Wrangling with Python*, by Jacquiline Kazil and Katharine Jarmul
+15. *Data Visualization with Python and Javascript*, by Kyran Dale
+16. *Natural Language Processing with Python*, by Steven Bird and Ewan Klein
+17. *Thoughtful Machine Learning with Python*, by Matthew Kirk
+18. *Python for Finance*, by Yves Hilpisch
 
 **Books by no starch press**
 
