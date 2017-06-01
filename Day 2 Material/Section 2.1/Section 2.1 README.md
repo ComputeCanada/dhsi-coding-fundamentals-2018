@@ -20,7 +20,7 @@ Each of the following sub-sections reference material in two different books: [*
 
 
 
-### 2.1.1 Why do I need to know how to program?
+### [2.1.1 Why do I need to know how to program?]()
 	
 1. What is a program?
 2. Problem Solving
@@ -30,24 +30,18 @@ Each of the following sub-sections reference material in two different books: [*
 6. Arithmetic
 7. Errors & Debugging
 
-[Slides](link to slides)
-[Command Line Screenshots](link to screenshots)
-[Exercises](link to exercises)
 
 ### 2.1.2 Variables, Expressions, and Statements
 
 1. Values & Types
 2. Variables
 3. Statements
-4. Operators & Operands
-5. Expressions
+4. Expressions
+5. Operators & Operands
 6. Order of Operations
 7. String Operations
 8. Comments
 
-[Slides for 2.1.2](link to slides)
-[Walkthrough for 2.1.2](link to Jupyter Notebook)
-[Exercises](link to exercises)
 
 ### 2.1.3 Conditional Expressions, i.e., IF statements 
 
@@ -61,11 +55,11 @@ Each of the following sub-sections reference material in two different books: [*
 
 ### 2.1.4 Functions
 
-1. Function Calls
+1. What is a function?
 2. Built-in Functions
-3. Math Functions
-4. Adding New Functions
-5. Definition of Uses
+3. Type Conversion Functions
+4. Math Functions & Random Numbers
+5. Adding New Functions
 6. Flow of Execution
 7. Parameters & Arguments
 8. Fruitful Functions & Void Functions
