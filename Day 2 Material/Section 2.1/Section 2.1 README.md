@@ -20,7 +20,7 @@ Each of the following sub-sections reference material in two different books: [*
 
 
 
-### [2.1.1 Why do I need to know how to program?]()
+### [2.1.1 Why do I need to know how to program?](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.1/Section%202.1.1%20Why%20Program%3F.key)
 	
 1. What is a program?
 2. Problem Solving
