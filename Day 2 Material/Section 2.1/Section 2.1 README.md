@@ -67,7 +67,7 @@ Each of the following sub-sections reference material in two different books: [*
 
 ### 2.1.5 Iterations and Loops
 
-1. WHILE Loops
+1.  WHILE Loops
 2. Infinite Loops
 3. "continue"
 4. FOR Loops
