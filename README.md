@@ -84,6 +84,8 @@ We will spend the day working with the terminal, learning the basics of the file
   - [1.2.7](https://github.com/dh-notes/dhnotes/blob/master/tutorials/command-line/109-text.md)
     Basic Text Manipulation
 
+***[Command Line Cheat Sheet](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/linux-command-line.pdf)*** (downloadable PDF)
+
 - 1.3 Coding with John: [Hunting the Whale](https://github.com/xpmethod-workshops/dhsi-coding-fundamentals/blob/master/CLI/CommandLineWalkThrough.md)  
 - 1.4 Simple Scripting and Regular Expressions
 
