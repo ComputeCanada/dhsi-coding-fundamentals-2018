@@ -9,7 +9,6 @@ Alicia Cappello | cappello@ualberta.ca | [Twitter](https://twitter.com/aliciavc9
 
 [Class Etherpad](https://public.etherpad-mozilla.org/p/Coding_Fundamentals_DHSI_2017)
 
--_-_-_-_-_ Content updated May 22nd, but not complete. _-_-_-_-_-
 
 ## Class Description
 
