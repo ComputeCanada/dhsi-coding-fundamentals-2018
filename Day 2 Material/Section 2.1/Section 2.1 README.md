@@ -120,13 +120,21 @@ Each of the following sub-sections reference material in two different books: [*
 6. Tips for Datasets
 
 
-
 ### 2.1.10 Object-oriented Programming
 
-1. Putting it All Together
+1. Object-oriented Programming
 2. Using Objects
-3. Programs
-4. Encapsulation
-5. Classes as Types
-6. Object Lifecycle
-7. Inheritance
+3. Program Basics
+4. Building Objects
+5. Multiple Instances
+6. Inheritance
+
+
+### 2.1.11 Extras
+
+Under construction.
+
+
+### 2.1.12 Exercises
+
+Under construction.
