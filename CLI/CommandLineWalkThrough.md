@@ -446,7 +446,7 @@ We need a file to do some manipulation with.  There are three standard ways to d
 
 We will use option #1 but it really doesn't matter as long as each program is installed.  Here's how to do it with curl:
 
-	$ curl -L -O http://bit.ly/2iFMx1M
+	$ curl -L -O http://bit.ly/MDxHM
 
 <!-- This link is to a copy of Moby Dick that is held inside the new 2017-05-15-ualberta GitHub repository. -->
 
@@ -454,19 +454,19 @@ The "-L" flag tells curl to follow redirects and the "-O" (a capital letter o an
 
 Let's see what this file is:
 
-	$ cat 2iFMx1M
+	$ cat MDxHM
 
 Whoa! That's a lot of text.  Fortunately there is a command just looking at the top of a document:
 
-	$ head 2iFMx1M
+	$ head MDxHM
 
 So, we can now see that this is Moby Dick.  We can control how much text we see by passing a number as a flag to head and we'll then only see that many lines.
 
-	$ head -3 2iFMx1M
+	$ head -3 MDxHM
 
 If there is a command called "head" that will show the top of the file then perhaps there is command called "tail" that will show the bottom of the file and indeed there is:
 
-	$ tail 2iFMx1M
+	$ tail MDxHM
 
 "1TTicb6" is really a terrible file name.  Let's do something about it.
 
@@ -474,7 +474,7 @@ If there is a command called "head" that will show the top of the file then perh
 
 >**Answer:**
 >
->	$ mv 2iFMx1M MobyDick.txt
+>	$ mv MDxHM MobyDick.txt
 >	
 >	$ cp MobyDick.txt MobyDick-BackUp.txt
 
@@ -512,29 +512,24 @@ Here we will spend a little bit of time focusing on getting only the word whale 
 
 When we come back to the command line and try it though it will be prettry clear that it doesn't work since it returns nothing.  The problem is that we are running into some confusion around interpreting the special characters.  There are at least four remedies:
 
-1. grep -n "\b[Ww]hales\?\b" MobyDick.txt
-2. grep -nw "[Ww]hales\? MobyDick.txt
-3. grep -n \\b[Ww]hales\\?\\b MobyDick.txt
-4. grep -nw [Ww]hales\\? MobyDick.txt
+1. `$ grep -n "\b[Ww]hales\?\b" MobyDick.txt`
+2. `$ grep -nw "[Ww]hales\?" MobyDick.txt`
+3. `$ grep -n \\b[Ww]hales\\?\\b MobyDick.txt`
+4. `$ grep -nw [Ww]hales\\? MobyDick.txt`
 
-[The quotes in #1 and #2 ensure the entire expression is evaluated by grep instead of by the user's shell.  We could use single quotes as well, we just need to do so consistently.]
+The quotes in #1 and #2 ensure the entire expression is evaluated by grep instead of by the user's shell.  We could use single quotes as well, we just need to do so consistently.  We'll use #4 since it requires the least typing
 
 >**QUESTION:** How do we combine grep and wc to count the number of lines that "whale" appears on?
 >
 >**ANSWER:**
 >
->	$ grep whale MobyDick.txt | wc
+>	grep -nw [Ww]hales\\? MobyDick.txt  | wc
 >
->	1274   15119   87694
+>	1435   16792  105936
 
-So, there are 1274 lines containing "whale".
+At this point we've solved the problem of not grabbing exactly the right content (Unless someone really wants to be picky about hyphenated words).
 
-	$ grep -w whale MobyDick.txt | wc
-	888   10591   60984
-
-So, it should be clear that the number of times the word "whale" is used is less that the number of times the character string "whale" is used.  At this point we've solved the problem of not grabbing exactly the right content.
-
-We're still not done yet though since the first problem remains: some lines might have "whale" appear in them more than once and we're not counting those instances if they exist.  To overcome this problem we'll need to trick the `wc` command into counting words as lines.
+We're still not done yet though since the first problem remains: "whale" may appear twice in a line and we're ignoring those instances if they exist.  To overcome this problem we'll need to trick the `wc` command into counting words as lines.
 
 >**QUESTION:** What would we need to do to the MobyDick.txt file to use `wc` to count words (note that "what" is different from "how", we'll worry about the "how" next)?
 >
@@ -556,7 +551,7 @@ It has replaced every space with a newline character ("\n").
 >
 >**Answer:**
 >
->	$ cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
+>	$ cat MobyDick.txt | tr ' ' '\n' | grep -nw [Ww]hales\\? | wc -l
 
 Four commands chained together to process your file is pretty sophisticated.  It's also pretty simple once you understand how the redirects work and know the commands.  It gets even better when you can turn it into a script and generalize it such that you can pass it _any_ regular expression and _any_ file...
 
@@ -577,8 +572,11 @@ We'll begin by using nano to create a new file:
 Note the use of the ".sh" at the end of the file name.  This extension is typically used to designate **sh**ell scripts.  It is not necessary but is a useful courtesy to anyone trying to figure out what a file is or does.
 
 Once inside nano type the following (note that you could copy and paste from the terminal in advance) and then exit and save the file:
-
-	cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
+	
+	#! /bin/sh
+	# counts the character string
+	
+	cat MobyDick.txt | tr ' ' '\n' | grep -nw [Ww]hales\\? | wc -l
 
 If we look in the directory now we'll see a new file:
 
@@ -588,19 +586,20 @@ If we look in the directory now we'll see a new file:
 
 We can check the content of this new file with `cat`:
 
-	$ cat corpusWordCounter.sh
+	#! /bin/sh
+	# counts the character string
 	
-	cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
+	cat MobyDick.txt | tr ' ' '\n' | grep -nw [Ww]hales\\? | wc -l
 
 We can run it by doing the following:
 
-	$ bash corpusWordCounter.sh
+	$ sh corpusWordCounter.sh
 	
-	907
+	1504
 
 Typing `bash` tells Bash (our shell/terminal environment) to interpret the contents of "corpusWordCounter.sh" as instructions given on the command line and to run each line as such.  We can stack any number of lines in this file and then execute them sequentially.
 
-[Note that some users might want to make this script an executable file.  To do this it will be necessary to use `chmod` and to put the bash signifier at the top of the file, which I currently can't remember the exact syntax of or I'd write it in... I'll come back to this.  Or look it up if needed.]
+>**ASIDE: If someone wants to make the script an executable file (i.e. a file that can be run like a program rather than passed to a program to be run) then this can be done with: `$ chmod u+x corpusWordCounter.sh`.  Chances are that the current directory is not in their PATH so the script will need to be run with `$ ./corpusWordCounter.sh`.  If they want this to behave like any other command then they can either add this directory to the PATH (not usually recommended) or move the file to a directory like `/usr/bin` or `/usr/local/bin/` which is where most of the standard linux commands can be found (use `$ echo $PATH` to see a list of possible locations separated by `:`).]
 
 ### Telling people what you are doing
 Writing scripts is a really excellent way to economize on time.  A little bit of effort put in upfront will have a lot of returns in the future by handling repetitive tasks quickly.  This benefit is lost if looking at the script in six months requires puzzling through what it does and why or figuring out how exactly it fits into the workflow again.  Adding comments to the script is a way to overcome this.
@@ -620,13 +619,13 @@ Using nano we can change the content of corpusWordCounter.sh to read:
 	# Author: Your Name
 	# Last modified: February 16, 2016
 	
-	cat MobyDick.txt | tr ' ' '\n' | grep -w whale | wc -l
+	cat MobyDick.txt | tr ' ' '\n' | grep -nw [Ww]hales\\? | wc -l
 
 If we run corpusWordCounter.sh again using `bash` we see no difference in the output.  This is as it should be since comments are ignored by the execution engine.
 
 	$ bash corpusWordCounter.sh
 	
-	907
+	1604
 
 ### Generalizing the script
 
@@ -666,7 +665,7 @@ Note that the description was also updated to make it clear what the syntax is f
 
 **Answer:**
 
-	tr ' ' '\n' < "$1" | grep -w "$2" | wc -l
+	cat "$1" | tr ' ' '\n' | grep -w "$2" | wc -l
 
 
 ### Repeating the script
@@ -711,17 +710,10 @@ Now, if we want to do any processing of the MobyDick.txt file or any other such 
 [We are dropping the \*'s from the **grep** command since it produces an error that isn't worth trying to sort out.]
 
 >**Challenge:** Using only **cat**, **grep**, **head**, **tail**, pipes and redirects create a file called MobyDick-Clean.txt that has the extra text removed from the top and the bottom?
-
+>
 >**Answer:**
 
 	$ head -21749 MobyDick.txt | tail -21729 > MobyDick-Clean.txt
-
->**Challenge:** How many times does the word "whale" appear in MobyDick-Clean.txt?
-
->**Answer:**
-
-	$ cat MobyDick-Clean.txt | tr ' ' '\n' | grep -w whale | wc -l
-	907
 
 Point out that there is *still* some additional text that could be culled (just run a **tail** on MobyDick-Clean.txt to see) but what matters is the process.  You could refine this.
 
