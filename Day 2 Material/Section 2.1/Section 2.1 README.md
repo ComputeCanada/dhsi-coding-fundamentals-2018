@@ -29,6 +29,10 @@ Each of the following sub-sections reference material in two different books: [*
 6. Arithmetic
 7. Errors & Debugging
 
+------------
+
+Sections 2.1.2 through 2.1.10 will be completed using Jupyter Notebooks, which is inside Anaconda. Each section below has its own [template notebook](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.1/Jupyter%20Notebooks/) for you to use and follow along with in class.
+
 
 ### 2.1.2 Variables, Expressions, and Statements
 
@@ -66,7 +70,7 @@ Each of the following sub-sections reference material in two different books: [*
 
 ### 2.1.5 Iterations and Loops
 
-1.  WHILE Loops
+1. WHILE Loops
 2. Infinite Loops
 3. "continue"
 4. FOR Loops
@@ -130,11 +134,4 @@ Each of the following sub-sections reference material in two different books: [*
 6. Inheritance
 
 
-### 2.1.11 Extras
-
-Under construction.
-
-
-### 2.1.12 Exercises
-
-Under construction.
+### 2.1.11 Regular Expressions
