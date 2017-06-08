@@ -1,0 +1,36 @@
+This adventure unfolds in a series of verbal descriptions. At the end of each description, choose one of the options denoted in CAPITAL LETTERS. You are captain of the U.S.S. Python, embarking on the ship's testing phase: a quick slingshot around Proxima Centauri and back to Jupiter Station. No sooner do you arrive on the bridge then your communications officer alerts you to an incoming distress call. The timing is terrible: you have only a skeleton crew on board, and limited resources. Do you IGNORE it? Or RESPOND to it? (Type your answer in CAPITAL LETTERS.) | IGNORE | 1 | RESPOND | 2
+You ignore the distress call and sail blithely on. Surely some other ship will pick up the frequency. Soon you forget the incident. What you don't know (yet) is that it's coming through a nearby wormhole from your own ship fourteen years in the future, when you are stranded in the Delta Quadrant. Unfortunately, only your ship's own receivers can detect its weak frequency on that subspace channel. Your future self is promptly assimilated by the Borg. +^*?~ THE END. +^*?~
+You divert course and encounter a non-Federation ship that appears nowhere in the ship's records. It is drifting, surrounded by debris, and still transmitting the distress call. Do you HAIL the ship, or raise your SHIELDS in a defensive posture? | HAIL | 3 | SHIELDS | 4
+Your communications officer hails the ship. After a few minutes, you establish audio-only communications. The aliens describe how they were attacked by Ferengi pirates who disabled their life-support systems. You arrange to send an away team of science officers to repair their ship. Unfortunately, it's a trap: your away team is killed on arrival. Before you can raise shields, the enemy ship launches its torpedoes. Your final thought before a fiery death is, "If only I'd tended my vines in France." +^*?~ THE END. +^*?~
+The moment you raise shields, the enemy ship jolts to life and fires a volley of photon torpedoes. The Python's shields are down to 80%. Do you return fire with PHASERS or TORPEDOES? | PHASERS | 5 | TORPEDOES | 6
+You fire phasers, but are hit with another volley of torpedoes. The Python's shields are now down to 60%, and its engines are damaged, so you cannot take evasive action. Another volley knocks out your phaser array, and hull damage is obstructing your torpedo bays. With limited time and a skeleton crew, what will you repair? Your PHASERS, your TORPEDOES, or your ENGINES? | PHASERS | 8 | ENGINES | 7 | TORPEDOES | 6
+You've made a very good choice. Unbeknownst to you, the Python's chief engineer has designed a prototype quantum torpedo capable of penetrating enemy shields. You fire and disable the enemy's weapons, then hail them to demand an explanation. They surrender and confess that they are Ferengi pirates themselves, and their distress call was an elaborate ruse. You engage a tractor beam and tow their ship to face justice at the nearest Federation starbase. +^*?~ THE END. +^*?~
+As you order the chief engineer to repair the engines, a hail from your first officer interrupts, calling you to the bridge. Confused, you're about to ask what she means -- when you remember that you've been in a holodeck training simulation since this story began, and the first officer is on the real bridge. As soon as you arrive there, you learn about an incoming distress call. (There's something eerily familiar about this.) Do you IGNORE it? Or RESPOND to it? | IGNORE | 1 | RESPOND | 2
+Your chief engineer redirects power from the main deflector dish to repair the phaser array. But your phasers are powerless against the enemy. The Python is soon adrift, with significant hull damage and no shields. The enemy hails you and you learn that they are Ferengi pirates themselves, and their distress call was an elaborate ruse. As they harvest your dilithium crystals and enslave your crew, you think wistfully, "If only I'd stayed tending my vineyard in France." +^*?~ THE END. +^*?~
+
+
+'''
+STAR TREK: The U.S.S. Python  
+A classic text-adventure game written as a #DHSI2014 exercise in learning Python.
+   		 _________
+       ___---   ..    ---___
+     _-                     -_       _  ___________________________=====__
+   _/                         \_    / ||                                 /\
+  /                             \   \_||_____,-,___________________     _\/
+ /                               \           | |                   =====
+/                                 |          | |
+|              ____      __--------------____|_|
+|            ,- __ -. \ |||                    `--_
+|            | (__) | -)=|                        _)
+|            `-____-' / |||              ______,--
+|                          --------------    | |
+\                                 |          | |
+ \                               /   _  _____| |___________________=====___
+  \_                           _/   / ||     `-'                          /\
+    \_                       _/     \_||___________________________     __\/
+      -___      ..       ___-                                      =====
+          ---_________---
+          
+'''
+
+* make the image/title appear in Description)
