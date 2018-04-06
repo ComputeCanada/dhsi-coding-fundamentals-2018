@@ -1,4 +1,4 @@
-#This program will convert an early modern (1582-1752) Gregorian calendar date into the Julian calendars of England.
+#This program will convert an early modern (1582-1752) Gregorian calendar date into the Julian calendars of England or Scotland.
 
 def calendarInput():
     #ask user for input and error check
@@ -64,7 +64,12 @@ def calendarInput():
         JulianMonth = 12
 
 	#provide human-readable output
-    print ("The date " + str(GregorianMonth) + "-" + str(GregorianDay) + "-" + str(GregorianYear) + " on the Continent was " + str(JulianMonth) + "-" + str(JulianDay) + "-" + str(JulianYear) + " in England.")
+    print ("The date " + str(GregorianMonth) + "-" + str(GregorianDay) + "-" + str(GregorianYear) + " on the Continent was " + str(JulianMonth) + "-" + str(JulianDay) + "-" + str(JulianYear) + " in England")
+
+    #add in the Scotland year
+    if (JulianYear > 1599 and ((JulianMonth == 3 and JulianDay < 25) or (JulianMonth < 3))):
+        ScottishYear = JulianYear - 1
+        print ("and " + str(JulianMonth) + "-" + str(JulianDay) + "-" + str(ScottishYear) + " in Scotland.")
 
     return failure
 
