@@ -5,13 +5,13 @@ def calendarInput():
     failure = 0
     try:
         #ask for month and check for validity
-        GregorianMonth = int(input('Enter a month in numerical form, e.g. "12" is December: '))
+        GregorianMonth = int(raw_input('Enter a month in numerical form, e.g. "12" is December: '))
         if (GregorianMonth < 1 or GregorianMonth > 12):
             failure = "n"
             print("There are only 12 months in a year.")
             
         #ask for day and check for validity
-        GregorianDay = int(input('Enter a day: '))
+        GregorianDay = int(raw_input('Enter a day: '))
         if (GregorianDay > 28 and GregorianMonth == 2):
             failure = "n"
             print("February only has 28 days.")
@@ -23,7 +23,7 @@ def calendarInput():
             print("There are between 1 and 31 days in a month.")
             
         #ask for year and check for validity
-        GregorianYear = int(input('Enter a year between 1582 and 1752: '))
+        GregorianYear = int(raw_input('Enter a year between 1582 and 1752: '))
         if (GregorianYear < 1582) or (GregorianYear > 1753):
             failure = "n"
             print("That is not a year between 1582 and 1752.")
@@ -71,20 +71,9 @@ def calendarInput():
         ScottishYear = JulianYear - 1
         print ("and " + str(JulianMonth) + "-" + str(JulianDay) + "-" + str(ScottishYear) + " in Scotland.")
 
-    #write dates to csv
-    convertedDates.write(str(GregorianMonth) + "-" + str(GregorianDay) + "-" + str(GregorianYear) + "," + str(JulianMonth) + "-" + str(JulianDay) + "-" + str(JulianYear) + "," + str(JulianMonth) + "-" + str(JulianDay) + "-")
-    if (JulianYear > 1599 and ((JulianMonth == 3 and JulianDay < 25) or (JulianMonth < 3))):
-        convertedDates.write(str(ScottishYear) + "\n")
-    else:
-        convertedDates.write(str(JulianYear) + "\n")
-
     return failure
 
 failure = 0
-# open and read the files, create Header Row for export .csv
-convertedDates = open('convertedDates.csv', 'w+')
-convertedDates.write('Gregorian Date,English Julian Date,Scottish Julian Date\n')
-    
 while type(failure) is int:
 	GregorianYear = calendarInput()
 
