@@ -1,17 +1,23 @@
 #This program will convert an early modern (1582-1752) Gregorian calendar date into the Julian calendars of England or Scotland.
 
+import csv
+
 def calendarInput():
     #ask user for input and error check
     failure = 0
     try:
+        #ask for complete date and check for validity
+        GregorianDate = input('Enter a date between 1582 and 1752 in the form mm/dd/yyyy, e.g. 12/25/1720: ')
+        GregorianDate = GregorianDate.split("/")
+
         #ask for month and check for validity
-        GregorianMonth = int(input('Enter a month in numerical form, e.g. "12" is December: '))
+        GregorianMonth = int(GregorianDate[0])
         if (GregorianMonth < 1 or GregorianMonth > 12):
             failure = "y"
             print("There are only 12 months in a year.")
             
         #ask for day and check for validity
-        GregorianDay = int(input('Enter a day: '))
+        GregorianDay = int(GregorianDate[1])
         if (GregorianDay > 28 and GregorianMonth == 2):
             failure = "y"
             print("February only has 28 days.")
@@ -23,14 +29,14 @@ def calendarInput():
             print("There are between 1 and 31 days in a month.")
             
         #ask for year and check for validity
-        GregorianYear = int(input('Enter a year between 1582 and 1752: '))
+        GregorianYear = int(GregorianDate[2])
         if (GregorianYear < 1582) or (GregorianYear > 1753):
             failure = "y"
             print("That is not a year between 1582 and 1752.")
 
     except ValueError:
         failure = "y"
-        print("Please enter valid numbers.")
+        print("Please enter valid numbers in a valid format.")
         
     #create a temporary placeholder day variable to convert from Gregorian to Julian date
     if ((GregorianYear < 1700) or (GregorianYear == 1700 and GregorianMonth < 3)):
@@ -72,7 +78,7 @@ def calendarInput():
         print ("and " + str(JulianMonth) + "/" + str(JulianDay) + "/" + str(ScottishYear) + " in Scotland.")
 
     #write dates to csv
-    convertedDates.write(str(GregorianMonth) + "-" + str(GregorianDay) + "/" + str(GregorianYear) + "," + str(JulianMonth) + "/" + str(JulianDay) + "/" + str(JulianYear) + "," + str(JulianMonth) + "/" + str(JulianDay) + "/")
+    convertedDates.write(str(GregorianMonth) + "/" + str(GregorianDay) + "/" + str(GregorianYear) + "," + str(JulianMonth) + "/" + str(JulianDay) + "/" + str(JulianYear) + "," + str(JulianMonth) + "/" + str(JulianDay) + "/")
     if (JulianYear > 1599 and ((JulianMonth == 3 and JulianDay < 25) or (JulianMonth < 3))):
         convertedDates.write(str(ScottishYear) + "\n")
     else:
