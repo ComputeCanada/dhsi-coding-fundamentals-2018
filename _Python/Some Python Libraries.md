@@ -84,7 +84,13 @@ Use Python? Want to geocode something? Looking for directions? Maybe matrices of
 
 [Twitter](https://dev.twitter.com/overview/api)
 
+## CSV
 
+This helps you read and process .csv files more easily
+
+## RE 
+
+This helps you use regular expressions in your code
 
 
 
