@@ -111,46 +111,46 @@ We will be using the shell and a text editor for this session.  If you are using
 
 Short pieces of code without comments.  Task is to figure out what the code does and add the comments.
 
-- 4.1 [**Integrated Development Environments** or IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) [update this once confirm we are using Video Studio Code that comes with anaconda 5.1+ install]
+- 3.3 [**Integrated Development Environments** or IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) [update this once confirm we are using Video Studio Code that comes with anaconda 5.1+ install]
 
   In addition to using a text editor and the command line, you can also use an IDE. We'll provide an overview of Video Studio Code, which comes with the Anaconda 5.1+ install, so you have an idea of the PROs and CONs of each method, then you can choose which option you'd like to use for your project. Just like text editors, there are a lot of IDEs you can choose from, a list of some are compared here -> [https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments]()
 
-3.3 Thinking about projects
+- 3.4 Thinking about projects
 
 Examples of "real world" projects so they can see/hear how the skills they are developing are / might be used.  Want to be able to share the code-part of whatever we share with them.
 
 http://cwrc.ca/rsc-src/ 
 
-- 3.4 Individual Projects: Brainstorming and Planning
+- 3.5 Individual Projects: Brainstorming and Planning
 
-  Tomorrow you'll get your first crack at your individual projects. Take the time tonight to think about what sort of a project you'd like to take on. If you're having trouble coming up with a project, ask us and we can provide you with some options.
+Tomorrow you'll get your first crack at your individual projects. Take the time tonight to think about what sort of a project you'd like to take on. If you're having trouble coming up with a project, ask us and we can provide you with some options.
   
-  - 4.2 **Describing Your Individual Project**
+- 3.6 **Describing Your Individual Project**
 
-  - 4.2.1 Write a short description of your individual project, in words. At this point, don't worry about the *how*, just think about the *what*.
-  - 4.2.2 Discuss your project with your classmates. Provide feedback to each other, and update your project description if needed.
+  - 3.6.1 Write a short description of your individual project, in words. At this point, don't worry about the *how*, just think about the *what*.
+  - 3.6.2 Discuss your project with your classmates. Provide feedback to each other, and update your project description if needed.
 
-- 4.3 **Planning Your Individual Project**
+- 3.7 **Planning Your Individual Project**
 
-  - 4.3.1 Reminder: what is psuedocode?
-  - 4.3.2 Plan the *logic* of your project using step-by-step instructions, with psuedocode, or using a flow chart. At this stage, start to think about the *how*.
-  - 4.3.3 Discuss your plan with your classmates. Do they have any suggestions on *how* to implement your project? 
+  - 3.7.1 Reminder: what is psuedocode?
+  - 3.7.2 Plan the *logic* of your project using step-by-step instructions, with psuedocode, or using a flow chart. At this stage, start to think about the *how*.
+  - 3.7.3 Discuss your plan with your classmates. Do they have any suggestions on *how* to implement your project? 
 
 ## Day 4: Individual Projects (5.5 hrs)
 
-- [3.3 **Getting Help**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.2/Section%202.2%20README.md )
+- [4.1 **Getting Help**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.2/Section%202.2%20README.md )
 
-  - 3.3.1 Python.org website
-  - 3.3.2 StackExchange
-  - 3.3.3 Books
-  - 3.3.4 Online Education
-  - 3.3.5 Google
+  - 4.1.1 Google
+  - 4.1.2 StackExchange
+  - 4.1.3 Python.org website
+  - 4.1.4 Online Education
+  - 4.1.5 Books
 
-- 4.4 **Coding Your Individual Project**
+- 4.2 **Coding Your Individual Project**
 
-  - 4.4.1 Decide which software or environment you want to use: text editor or IDE.
-  - 4.4.2 Start coding your script by translating your description into comments.
-  - 4.4.3 Add the proper syntax to your script by translating your plan and/or pseudocode into Python.
+  - 4.2.1 Decide which software or environment you want to use: text editor or IDE.
+  - 4.2.2 Start coding your script by translating your description into comments.
+  - 4.2.3 Add the proper syntax to your script by translating your plan and/or pseudocode into Python.
 
   **If you're using a text editor, don't forget to SAVE often!**
 
