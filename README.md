@@ -156,16 +156,17 @@ Tomorrow you'll get your first crack at your individual projects. Take the time 
 
 ## Day 5: Race to the Finish (3 hrs)
 
-- 5.1 **Continue Working on Your Projects** (1.5 hrs)
+- 5.1 **Continue Working on Your Projects** (1 hrs)
 
 - 5.2 **Project Review** (1 hr)
   - Was the scope of my project too big or too small?
   - Did I add enough comments that a non-programmer can understand what the code does? Can I still understand it if I look at it again in 6 months?
   - What do I still need to do? Make a plan to finish your project (if you haven't already done so) after you leave DHSI and put this plan in your code.
 
-- 5.3 **Where to go from here** (30 mins)
+- 5.3 **Where to go from here** (1 hr)
   - Keep working on your projects!
   - Email us if you have questions or need help.
+  - Jupyter notebooks
   - Send us your script when you're done, and we'll post it on this website.
   - And most importantly ... have fun!
 
