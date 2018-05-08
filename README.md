@@ -113,7 +113,7 @@ Short pieces of code without comments.  Task is to figure out what the code does
 
 - 4.1 [**Integrated Development Environments** or IDEs](https://en.wikipedia.org/wiki/Integrated_development_environment) [update this once confirm we are using Video Studio Code that comes with anaconda 5.1+ install]
 
-  In addition to using a text editor and the command line, you can also use an IDE. We'll provide an overview of one IDE, either [PyCharm](https://www.jetbrains.com/pycharm/) or [Spyder](https://pythonhosted.org/spyder/), so you have an idea of the PROs and CONs of each method, then you can choose which option you'd like to use for your project. Just like text editors, there are a lot of IDEs you can choose from, a list of some are compared here -> [https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments]()
+  In addition to using a text editor and the command line, you can also use an IDE. We'll provide an overview of Video Studio Code, which comes with the Anaconda 5.1+ install, so you have an idea of the PROs and CONs of each method, then you can choose which option you'd like to use for your project. Just like text editors, there are a lot of IDEs you can choose from, a list of some are compared here -> [https://en.wikipedia.org/wiki/Comparison_of_integrated_development_environments]()
 
 3.3 Thinking about projects
 
