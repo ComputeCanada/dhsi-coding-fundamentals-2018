@@ -103,11 +103,11 @@ Tomorrow we'll start the day by writing a script that will convert early modern 
 
 ## Day 3: Python II (5.5 hrs)
 
-- 3.1 [Chinese Zodiac](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2018/tree/master/_Python/python-live-code%20(1)/zodiac ) [update this link when I upload the code example to be about calendars]
+- 3.1 [Calendar Reform](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2018/tree/master/_Python/python-live-code/earlyModernCalendar )
 
 We will be using the shell and a text editor for this session.  If you are using Windows, it will make sense to use the command prompt rather than MobaXterm because it will give you easier access to the Anaconda installs of Python.  You can use many of your Bash Shell commands in the Windows Command Prompt but you'll find a crash course [HERE](http://www.cs.princeton.edu/courses/archive/spr05/cos126/cmd-prompt.html ).
 
-- 3.2 Code Annotation Practice / Faded examples / Broken cod
+- 3.2 Code Annotation Practice / Faded examples / Broken code
 
 Short pieces of code without comments.  Task is to figure out what the code does and add the comments.
 
