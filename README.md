@@ -74,11 +74,11 @@ We will spend the day working with the terminal, learning the basics of the file
 
 **Anaconda** - You may have already installed Anaconda before this course began. If you didn't install it, please do so tonight. You can find the free download at -> https://www.continuum.io/downloads. Make sure to download version 5.1 (or greater) of Anaconda and choose the Python 3.6 (or greater) version.  If you have trouble with the install then you can continue to use the lab machines in the morning and we will help you complete the install later in the day.
 
-**Text Editor** - Most operating systems come pre-installed with at least one version of a text editor. However, programmers tend to like to use more complex text editors that are designed to work with programming languages and provide helpful visual cues that alert users to potential errors in their code. There are a lot of options to use, as you can see from this [list](https://en.wikipedia.org/wiki/List_of_text_editors ) but for this class we will be using [Sublime Text 3] (https://www.sublimetext.com/3 ) for both uniformity across platforms and a nice combination of a simple interface and powerful extensions.
+**Text Editor** - Most operating systems come pre-installed with at least one version of a text editor. However, programmers tend to like to use more complex text editors that are designed to work with programming languages and provide helpful visual cues that alert users to potential errors in their code. There are a lot of options to use, as you can see from this [list](https://en.wikipedia.org/wiki/List_of_text_editors ). For this class we will be using [BBEdit](https://www.barebones.com/products/bbedit/) on the computer lab Macs. Another good option is [Sublime Text 3] (https://www.sublimetext.com/3 ), which runs uniformly across platforms and has a nice combination of a simple interface and powerful extensions.
 
 ## Day 2: Python I (5.5 hrs)
 
-- [2.1 **Python Programming for Everyone**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.1/Section%202.1%20README.md)
+- [2.1 **Python Programming for Everyone**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2018/blob/master/_Python/Section%202.1/Section%202.1%20README.md)
 
     - 2.1.1 Why do I need to know how to program?
     - 2.1.2 Variables, Expressions, and Statements
