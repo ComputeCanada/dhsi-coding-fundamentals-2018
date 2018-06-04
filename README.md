@@ -136,7 +136,7 @@ Tomorrow you'll get your first crack at your individual projects. Take the time 
 
 ## Day 4: Individual Projects (5.5 hrs)
 
-- [4.1 **Getting Help**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.2/Section%202.2%20README.md )
+- [4.1 **Getting Help**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2018/blob/master/_Python/Section%204.1/Section%204.1%20README.md )
 
   - 4.1.1 Google
   - 4.1.2 StackExchange and Stack Overflow
