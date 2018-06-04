@@ -3,7 +3,7 @@
 Getting help with questions or problems that you have with the Python can be quite easy, you just have to know where to look. The following areas are great places to start looking for help and asking questions. 
 
 
-### 2.2.1 Python.org website
+### 2.2.1 Python.org website and Code Documentation
 
 The main [Python](https://www.python.org) website contains everything you ever wanted to know about Python, including:
 
@@ -15,15 +15,19 @@ The main [Python](https://www.python.org) website contains everything you ever w
 6. [Python Mailing Lists](https://www.python.org/community/lists/), including the [Python-Help](https://mail.python.org/mailman/listinfo/python-help) mailing list where you can post all sorts of questions about Python and volunteer experts will reply.
 7. [The Python Wiki](https://wiki.python.org/moin/)
 
+When having trouble with a specific library, there is usually documentation about that library that will help you debug. Some common libraries and their documentation links include
+
+1. [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
+2. [NLTK Documentation](https://github.com/nltk/nltk/wiki)
+3. [Tweepy](http://tweepy.readthedocs.io/en/v3.6.0/)
 
 ### 2.2.2 StackExchange and Stack Overflow
 
-Both StakeExchange and Stack Overflow are great Q&A websites to go to for help. Without signing up for an account, you can look through the questions and answers already posted. With an account, you can post your own questions for other to answer.
+Both StackExchange and Stack Overflow are great Q&A websites to go to for help. Without signing up for an account, you can look through the questions and answers already posted. With an account, you can post your own questions for other to answer.
 
 1. [Python Documentation](https://stackoverflow.com/documentation/python/topics)
 2. [Questions with Python Tags](https://stackoverflow.com/questions/tagged/python)
 3. [StackExchange's Python Code Review](https://codereview.stackexchange.com/questions/tagged/python)
-
 
 ### 2.2.3 Books
 
