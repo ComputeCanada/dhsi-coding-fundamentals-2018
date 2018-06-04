@@ -139,7 +139,7 @@ Tomorrow you'll get your first crack at your individual projects. Take the time 
 - [4.1 **Getting Help**](https://github.com/ComputeCanada/dhsi-coding-fundamentals-2017/blob/master/Day%202%20Material/Section%202.2/Section%202.2%20README.md )
 
   - 4.1.1 Google
-  - 4.1.2 StackExchange
+  - 4.1.2 StackExchange and Stack Overflow
   - 4.1.3 Python.org website
   - 4.1.4 Online Education
   - 4.1.5 Books

@@ -1,9 +1,22 @@
-## Section 2.2 Getting Help
+## Section 4.1 Getting Help
 
 Getting help with questions or problems that you have with the Python can be quite easy, you just have to know where to look. The following areas are great places to start looking for help and asking questions. 
 
+### 4.1.1 Google
 
-### 2.2.1 Python.org website and Code Documentation
+Not gonna lie, my first response to error messages is to search for the issue on Google. For example, if you get an error message, use the message as your search term. Or if you want to know more about a specific function, use the name of the function as your search term. This usually leads me to StackExchange/Stack Overflow or to official Python documentation (see below).
+
+
+### 4.1.2 StackExchange and Stack Overflow
+
+Both StackExchange and Stack Overflow are great Q&A websites to go to for help. Without signing up for an account, you can look through the questions and answers already posted. With an account, you can post your own questions for other to answer.
+
+1. [Python Documentation](https://stackoverflow.com/documentation/python/topics)
+2. [Questions with Python Tags](https://stackoverflow.com/questions/tagged/python)
+3. [StackExchange's Python Code Review](https://codereview.stackexchange.com/questions/tagged/python)
+
+
+### 4.1.3 Python.org website and Code Documentation
 
 The main [Python](https://www.python.org) website contains everything you ever wanted to know about Python, including:
 
@@ -21,15 +34,22 @@ When having trouble with a specific library, there is usually documentation abou
 2. [NLTK Documentation](https://github.com/nltk/nltk/wiki)
 3. [Tweepy](http://tweepy.readthedocs.io/en/v3.6.0/)
 
-### 2.2.2 StackExchange and Stack Overflow
 
-Both StackExchange and Stack Overflow are great Q&A websites to go to for help. Without signing up for an account, you can look through the questions and answers already posted. With an account, you can post your own questions for other to answer.
+### 4.1.4 Online Education
 
-1. [Python Documentation](https://stackoverflow.com/documentation/python/topics)
-2. [Questions with Python Tags](https://stackoverflow.com/questions/tagged/python)
-3. [StackExchange's Python Code Review](https://codereview.stackexchange.com/questions/tagged/python)
+There are several places online where you can learn more about Python, or even refresh what you may have forgotten. The majority of these courses are free. Others may be accessible via your academic or public library.
 
-### 2.2.3 Books
+1. [Python Courses](https://www.coursera.org/courses?languages=en&query=python) on Coursera
+2. [Python Courses](https://www.codecademy.com/learn/python) on Code Academy
+3. [Google's Python Class](https://developers.google.com/edu/python/)
+4. [Python Tutorial](https://www.learnpython.org) on LearnPython.org
+5. [Programming Foundations with Python](https://www.udacity.com/course/programming-foundations-with-python--ud036) on Udacity
+6. [Introduction to Programming with Python](https://alison.com/course/Introduction-to-Programming-with-Python) on Alison.com
+7. [Python Courses](https://www.edx.org/course/subject/computer-science/python) on edX
+8. [Python Training and Tutorials](https://www.lynda.com/Python-training-tutorials/415-0.html) on Lynda.com
+
+
+### 4.1.5 Books
 
 Everyone and their mother has written a book about Python! The best publisher for technical books is [O'Reilly](https://www.oreilly.com). [Safari Books Online](https://www.safaribooksonline.com/?utm_medium=content&utm_source=oreilly.com&utm_campaign=lgen&utm_content=20170505+homepage+get+started+now) is O'Reilly's "technology and business learning platform." Both academic and public libraries have access to Safari Books Online for free, but you can also sign-up for a trial version.
 
@@ -72,23 +92,4 @@ Everyone and their mother has written a book about Python! The best publisher fo
 6. *Python for Data Science for Dummies*, by John Paul Mueller and Luca Massaron
 7. *Beginning Programming with Python for Dummies*, by John Paul Mueller
 8. *Python for Everybody*, by Charles Severance
-
-
-### 2.2.4 Online Education
-
-There are several places online where you can learn more about Python, or even refresh what you may have forgotten. The majority of these courses are free. Others may be accessible via your academic or public library.
-
-1. [Python Courses](https://www.coursera.org/courses?languages=en&query=python) on Coursera
-2. [Python Courses](https://www.codecademy.com/learn/python) on Code Academy
-3. [Google's Python Class](https://developers.google.com/edu/python/)
-4. [Python Tutorial](https://www.learnpython.org) on LearnPython.org
-5. [Programming Foundations with Python](https://www.udacity.com/course/programming-foundations-with-python--ud036) on Udacity
-6. [Introduction to Programming with Python](https://alison.com/course/Introduction-to-Programming-with-Python) on Alison.com
-7. [Python Courses](https://www.edx.org/course/subject/computer-science/python) on edX
-8. [Python Training and Tutorials](https://www.lynda.com/Python-training-tutorials/415-0.html) on Lynda.com
-
-
-### 2.2.5 Google
-
-When all else fails, search for your issue on Google. For example, if you get an error message, use the message as your search term. Or if you want to know more about a specific function, use the name of the function as your search term.
 
