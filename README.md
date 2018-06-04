@@ -31,11 +31,9 @@ You should walk away from this course with the following knowledge:
 
 ## Reading Material
 
-[This is the 2017 Coursepak link.  Need the 2018 link from Dan.  Update entire section once available.] 
-
 The main book for our course is called *Think Python: How to Think Like a Computer Scientist* by Allen B. Downey. We're using the 2nd Edition, as it was updated for version 3.x of Python. There are four places you can get this book:
 
-  1. Via the coursepak provided by DHSI [here](http://dhsi.org/content/2017Curriculum/4.%20Fundamentals%20of%20Programming:Coding%20for%20Human(s%7Cists).pdf ). You can download the coursepak as a PDF and use it on your computer, you can print it yourself, or you can ask the UVic Bookstore to print you a copy.
+  1. Via the coursepak provided by DHSI [here](http://dhsi.org/content/2018Curriculum/30.%20Fundamentals%20of%20Programming:Coding%20for%20Human(s%7Cists).pdf ). You can download the coursepak as a PDF and use it on your computer, you can print it yourself, or you can ask the UVic Bookstore to print you a copy.
 
   2. Via the book publisher's website [HERE](http://greenteapress.com/thinkpython2/thinkpython2.pdf ). The PDF or ePub versions can be downloaded for free and used on your computer or printed if you'd like.
 
