@@ -94,7 +94,9 @@ Open a BASH terminal window and you'll see:
 
 We'll ignore the "some information about the user/system" and just abbreviate this to "$" in the command examples shared here.  Don't type the "$" it's there just to tell you to type what is after it.  If you see content in the text block that doesn't have a prompt then it is either wraping over from the line above or output, context will usually make this clear.
 
-If you want to give yourself some extra space by removing the "some information about the user/system" for the duration of this BASH session then type the command: `PS1='$ '` into your shell, your window should look like all the examples in this workshop.  This isn’t necessary to follow along (in fact, your prompt may have helpful information you want to know about). This is up to you!
+> If you want to give yourself some extra space by removing the "some information about the user/system" for the duration of this BASH session then type the command: `PS1='$ '` into your shell, your window should look like all the examples in this workshop.  This isn’t necessary to follow along (in fact, your prompt may have helpful information you want to know about). This is up to you! [^PS]
+
+[^PS]: For a helpful explanation _all_ the PS (prompt statement) control commands see: [https://www.thegeekstuff.com/2008/09/bash-shell-take-control-of-ps1-ps2-ps3-ps4-and-prompt_command/]()
 
 Let's get started. Type:
 
@@ -186,7 +188,7 @@ Let's make the proper directory using underscores and move into that directory (
 
 Now we'll get the data that we need for the rest of this portion of the workshop by issuing the following command:
 
-	$ git clone https://github.com/ComputeCanada/DC-shell_automation  
+	$ git clone https://github.com/ComputeCanada/dhsi-coding-fundamentals-2018  
 
 (For this to work you need both a tool called git installed and a working internet connection on the computer you are using.  If it fails just let someone helping with the workshop know and we'll get you helped out.)
 
